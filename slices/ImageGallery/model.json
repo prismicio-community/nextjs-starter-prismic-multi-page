@@ -1,0 +1,64 @@
+{
+  "id": "image_gallery",
+  "type": "SharedSlice",
+  "name": "ImageGallery",
+  "description": "ImageGallery",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImageGallery",
+      "primary": {
+        "galleryTitle": {
+          "config": {
+            "label": "Gallery Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "image": {
+          "config": {
+            "label": "",
+            "constraint": {
+              "width": 727,
+              "height": 402
+            },
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "imageDescription": {
+          "config": {
+            "label": "",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "",
+            "id": "link",
+            "placeholder": "",
+            "allowTargetBlank": true
+          }
+        },
+        "linkLabel": {
+          "config": {
+            "label": "",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

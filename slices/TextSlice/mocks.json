@@ -1,0 +1,20 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "TextSlice",
+    "primary": {
+      "text": [
+        {
+          "type": "paragraph",
+          "text": "Incididunt nulla ullamco deserunt Lorem magna laboris excepteur voluptate do nulla voluptate.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "text_slice"
+  }
+]

@@ -1,0 +1,136 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "ImageGallery",
+    "primary": {
+      "galleryTitle": [
+        {
+          "type": "heading2",
+          "text": "Evolve turn-key paradigms",
+          "spans": []
+        }
+      ]
+    },
+    "items": [
+      {
+        "image": {
+          "dimensions": {
+            "width": 727,
+            "height": 402
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=727&h=402&fit=crop"
+        },
+        "imageDescription": [
+          {
+            "type": "paragraph",
+            "text": "Amet sit ad duis cillum aliqua amet ex veniam pariatur. Duis minim dolor dolor adipisicing sunt mollit culpa eiusmod culpa sint commodo occaecat. Veniam cillum adipisicing enim dolor commodo reprehenderit veniam duis deserunt eiusmod voluptate minim reprehenderit.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkLabel": "orchestrate seamless metrics"
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 727,
+            "height": 402
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=727&h=402&fit=crop"
+        },
+        "imageDescription": [
+          {
+            "type": "paragraph",
+            "text": "Lorem laboris enim voluptate aute dolor ad ipsum labore laborum. In qui culpa aliqua non.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "linkLabel": "implement frictionless web services"
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 727,
+            "height": 402
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=727&h=402&fit=crop"
+        },
+        "imageDescription": [
+          {
+            "type": "paragraph",
+            "text": "Commodo pariatur ut ex duis proident et. Eu commodo irure eu aute sunt pariatur cupidatat nulla commodo. Sint sint et qui fugiat.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": "empower B2B experiences"
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 727,
+            "height": 402
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=727&h=402&fit=crop"
+        },
+        "imageDescription": [
+          {
+            "type": "paragraph",
+            "text": "Elit officia non excepteur irure et. Elit excepteur consectetur cupidatat exercitation nisi et do in pariatur magna elit quis Lorem.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
+        "linkLabel": "streamline seamless web-readiness"
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 727,
+            "height": 402
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=727&h=402&fit=crop"
+        },
+        "imageDescription": [
+          {
+            "type": "paragraph",
+            "text": "Lorem enim dolore consectetur velit. Elit fugiat consequat occaecat.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "linkLabel": "innovate strategic synergies"
+      }
+    ],
+    "slice_type": "image_gallery"
+  }
+]

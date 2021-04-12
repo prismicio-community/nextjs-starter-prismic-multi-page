@@ -1,0 +1,20 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "QuoteSlice",
+    "primary": {
+      "quotetext": [
+        {
+          "type": "paragraph",
+          "text": "Ea consectetur enim et eu dolor laboris.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "quote_slice"
+  }
+]
