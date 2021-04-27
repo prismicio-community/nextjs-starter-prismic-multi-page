@@ -1,63 +1,164 @@
 {
   "Page": {
-    "uid": {
-      "type": "UID",
-      "config": {
-        "label": "UID",
-        "placeholder": "unique-identifier-eg-homepage"
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "unique-identifier-eg-homepage" } },
+      "body": {
+          "type": "Slices",
+          "fieldset": "Slice zone",
+          "config": {
+              "labels": {},
+              "choices": {
+                  "banner_slice": {
+                      "id": "banner_slice",
+                      "type": "SharedSlice",
+                      "name": "BannerSlice",
+                      "description": "BannerSlice",
+                      "variations": [
+                          {
+                              "id": "default-slice",
+                              "name": "Default slice",
+                              "docURL": "...",
+                              "version": "sktwi1xtmkfgx8626",
+                              "description": "BannerSlice",
+                              "primary": {
+                                  "title": { "config": { "label": "Title", "placeholder": "This is where it all begins...", "allowTargetBlank": true, "single": "heading1" }, "type": "StructuredText" },
+                                  "description": { "config": { "label": "Description", "placeholder": "A nice description of your feature", "allowTargetBlank": true, "single": "paragraph" }, "type": "StructuredText" },
+                                  "link": { "type": "Link", "config": { "label": "", "placeholder": "", "allowTargetBlank": true } },
+                                  "linkLabel": { "type": "Text", "config": { "label": "", "placeholder": "" } },
+                                  "background": { "config": { "label": "", "constraint": {}, "thumbnails": [] }, "type": "Image" }
+                              },
+                              "items": {}
+                          }
+                      ],
+                      "imageUrl": "https://images.prismic.io/nextjs-sm-tutorial-series/shared-slices/banner_slice/preview.png"
+                  },
+                  "featured_image": {
+                      "id": "featured_image",
+                      "type": "SharedSlice",
+                      "name": "FeaturedImage",
+                      "description": "FeaturedImage",
+                      "variations": [
+                          {
+                              "id": "default-slice",
+                              "name": "Default slice",
+                              "docURL": "...",
+                              "version": "sktwi1xtmkfgx8626",
+                              "description": "ImageHighlight",
+                              "primary": {
+                                  "title": { "config": { "label": "Title", "placeholder": "This is where it all begins...", "allowTargetBlank": true, "single": "heading2" }, "type": "StructuredText" },
+                                  "headline": { "config": { "label": "Headline", "placeholder": "A nice description of your product", "allowTargetBlank": true, "multi": "paragraph" }, "type": "StructuredText" },
+                                  "link": { "type": "Link", "config": { "label": "", "placeholder": "", "allowTargetBlank": true } },
+                                  "linkLabel": { "type": "Text", "config": { "label": "", "placeholder": "" } },
+                                  "featuredImage": { "config": { "label": "", "constraint": {}, "thumbnails": [] }, "type": "Image" }
+                              },
+                              "items": {}
+                          }
+                      ],
+                      "imageUrl": "https://images.prismic.io/nextjs-sm-tutorial-series/shared-slices/featured_image/preview.png"
+                  },
+                  "full_width_image": {
+                      "id": "full_width_image",
+                      "type": "SharedSlice",
+                      "name": "FullWidthImage",
+                      "description": "FullWidthImage",
+                      "variations": [
+                          {
+                              "id": "default-slice",
+                              "name": "Default slice",
+                              "docURL": "...",
+                              "version": "sktwi1xtmkfgx8626",
+                              "description": "FullWidthImage",
+                              "primary": { "image": { "config": { "label": "", "constraint": { "width": 980, "height": 300 }, "thumbnails": [] }, "type": "Image" } },
+                              "items": {}
+                          }
+                      ],
+                      "imageUrl": "https://images.prismic.io/nextjs-sm-tutorial-series/shared-slices/full_width_image/preview.png"
+                  },
+                  "text_slice": {
+                      "id": "text_slice",
+                      "type": "SharedSlice",
+                      "name": "TextSlice",
+                      "description": "TextSlice",
+                      "variations": [
+                          {
+                              "id": "default-slice",
+                              "name": "Default slice",
+                              "docURL": "...",
+                              "version": "sktwi1xtmkfgx8626",
+                              "description": "TextSlice",
+                              "primary": {
+                                  "text": {
+                                      "config": {
+                                          "label": "Text",
+                                          "placeholder": "A nice description of your feature",
+                                          "allowTargetBlank": true,
+                                          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                                      },
+                                      "type": "StructuredText"
+                                  }
+                              },
+                              "items": {}
+                          }
+                      ],
+                      "imageUrl": "https://images.prismic.io/nextjs-sm-tutorial-series/shared-slices/text_slice/preview.png"
+                  },
+                  "quote_slice": {
+                      "id": "quote_slice",
+                      "type": "SharedSlice",
+                      "name": "QuoteSlice",
+                      "description": "QuoteSlice",
+                      "variations": [
+                          {
+                              "id": "default-slice",
+                              "name": "Default slice",
+                              "docURL": "...",
+                              "version": "sktwi1xtmkfgx8626",
+                              "description": "QuoteSlice",
+                              "primary": { "quotetext": { "config": { "label": "", "placeholder": "", "allowTargetBlank": true, "multi": "paragraph" }, "type": "StructuredText" } },
+                              "items": {}
+                          }
+                      ],
+                      "imageUrl": "https://images.prismic.io/nextjs-sm-tutorial-series/shared-slices/quote_slice/preview.png"
+                  },
+                  "image_gallery": {
+                      "id": "image_gallery",
+                      "type": "SharedSlice",
+                      "name": "ImageGallery",
+                      "description": "ImageGallery",
+                      "variations": [
+                          {
+                              "id": "default-slice",
+                              "name": "Default slice",
+                              "docURL": "...",
+                              "version": "sktwi1xtmkfgx8626",
+                              "description": "ImageGallery",
+                              "primary": { "galleryTitle": { "config": { "label": "Gallery Title", "placeholder": "This is where it all begins...", "allowTargetBlank": true, "single": "heading2" }, "type": "StructuredText" } },
+                              "items": {
+                                  "image": { "config": { "label": "", "constraint": { "width": 727, "height": 402 }, "thumbnails": [] }, "type": "Image" },
+                                  "imageDescription": { "config": { "label": "", "placeholder": "", "allowTargetBlank": true, "single": "paragraph" }, "type": "StructuredText" },
+                                  "link": { "type": "Link", "config": { "label": "", "placeholder": "", "allowTargetBlank": true } },
+                                  "linkLabel": { "config": { "label": "", "placeholder": "" }, "type": "Text" }
+                              }
+                          }
+                      ],
+                      "imageUrl": "https://images.prismic.io/nextjs-sm-tutorial-series/shared-slices/image_gallery/preview.png"
+                  }
+              }
+          }
       }
-    },
-    "body": {
-      "type": "Slices",
-      "fieldset": "Slice zone",
-      "config": {
-        "labels": {},
-        "choices": {}
-      }
-    }
   },
   "SEO Metadata": {
-    "meta_title": {
-      "type": "Text",
-      "config": {
-        "label": "Meta Title",
-        "placeholder": "My title for Search Engine"
-      }
-    },
-    "meta_description": {
-      "type": "Text",
-      "config": {
-        "label": "Meta Description",
-        "placeholder": "The description that will appear in search engine"
-      }
-    },
-    "social_cards": {
-      "type": "Group",
-      "config": {
-        "fields": {
-          "social_card_image": {
-            "type": "Image",
-            "config": {
-              "constraint": {},
-              "thumbnails": [],
-              "label": "Social Card Image"
-            }
-          },
-          "social_card_title": {
-            "type": "Text",
-            "config": {
-              "label": "Social Card Title"
-            }
-          },
-          "social_card_description": {
-            "type": "Text",
-            "config": {
-              "label": "Social card description"
-            }
+      "meta_title": { "type": "Text", "config": { "label": "Meta Title", "placeholder": "My title for Search Engine" } },
+      "meta_description": { "type": "Text", "config": { "label": "Meta Description", "placeholder": "The description that will appear in search engine" } },
+      "social_cards": {
+          "type": "Group",
+          "config": {
+              "fields": {
+                  "social_card_image": { "type": "Image", "config": { "constraint": {}, "thumbnails": [], "label": "Social Card Image" } },
+                  "social_card_title": { "type": "Text", "config": { "label": "Social Card Title" } },
+                  "social_card_description": { "type": "Text", "config": { "label": "Social card description" } }
+              },
+              "label": "Social Cards - Facebook & Twitter"
           }
-        },
-        "label": "Social Cards - Facebook & Twitter"
       }
-    }
   }
 }
