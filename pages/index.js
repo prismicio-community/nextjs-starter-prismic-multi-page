@@ -8,7 +8,7 @@ import Layout from "./../components/Layout";
 const Page = (props) => {
   return (
     <Layout menu={props.menu}>
-      <SliceZone {...props} resolver={resolver} />;
+      <SliceZone {...props} resolver={resolver} />
     </Layout>
   );
 };
@@ -16,7 +16,11 @@ const Page = (props) => {
 // Fetch content from prismic
 export const getStaticProps = useGetStaticProps({
   client: Client(),
-  uid: () => "home",
+  type: 'page',
+  queryType: 'repeat',
+  apiParams: {
+    uid: 'home'
+  }
 });
 
 export default Page;
