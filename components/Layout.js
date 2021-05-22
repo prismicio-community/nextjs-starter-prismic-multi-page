@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import HeaderPrismic from './HeaderPrismic'
+import Header from './Header'
 
 const Layout = ({ children, menu }) => {
   return (
@@ -8,7 +8,7 @@ const Layout = ({ children, menu }) => {
       <Head>
         <title> Prismic Next.js Multi Page Website </title>
       </Head>
-      <HeaderPrismic menu={menu} />
+      <Header menu={menu} />
       <main>{children}</main>
     </div>
   );
