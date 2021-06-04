@@ -30,7 +30,7 @@
     "babel-loader": "^8.2.2",
     "babel-plugin-react-require": "^3.1.3",
     "shx": "^0.3.3",
-    "slice-machine-ui": "^0.0.44",
+    "slice-machine-ui": "latest",
     "sm-commons": "^0.0.23"
   }
 }
