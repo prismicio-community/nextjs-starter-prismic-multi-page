@@ -4,9 +4,9 @@ import { RichText, Link } from 'prismic-reactjs'
 const Header = ({ menu = [] }) => (
     <header className="site-header">
       <a href="/" className="logo">
-        {RichText.asText(menu.data.title)}
+        {RichText.asText(menu.data?.title)}
       </a>
-      <Links menuLinks={menu.data.menu_links} />
+      <Links menuLinks={menu.data?.menu_links} />
       <style jsx>{`
         .site-header {
           height: 30px;
