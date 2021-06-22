@@ -18,7 +18,7 @@
   "dependencies": {
     "js-cookie": "^2.2.1",
     "next": "^10.0.8",
-    "next-slicezone": "^0.1.0-alpha.0",
+    "next-slicezone": "^0.1.0",
     "next-transpile-modules": "^6.1.0",
     "@prismicio/client": "^4.0.0",
     "prismic-reactjs": "^1.3.3",
