@@ -1,6 +1,6 @@
 {
   "id": "page",
-  "name": "Page",
+  "label": "Page",
   "repeatable": true,
   "json": {
     "Page": {
