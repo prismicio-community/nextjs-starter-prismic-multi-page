@@ -3,6 +3,6 @@
   "libraries": [
     "@/slices"
   ],
-  "_latest": "0.0.44",
+  "_latest": "0.1.0",
   "storybook": "http://localhost:8888"
 }

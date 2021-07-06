@@ -22,6 +22,34 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "quoteReference",
+      "name": "Quote Reference",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "QuoteSlice",
+      "primary": {
+        "quotetext": {
+          "config": {
+            "label": "",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "reference": {
+          "config": {
+            "label": "",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
     }
   ]
 }

@@ -16,9 +16,8 @@ const Page = (props) => {
 // Fetch content from prismic
 export const getStaticProps = useGetStaticProps({
   client: Client(),
-  apiParams: {
-    uid: 'home'
-  }
-});
+  type: 'home-page', 
+  queryType: 'single',
+})
 
 export default Page;

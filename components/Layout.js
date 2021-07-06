@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Header from './Header'
+import ExitPreviewButton from './ExitPreviewButton'
 
 const Layout = ({ children, menu }) => {
   return (
@@ -10,6 +11,7 @@ const Layout = ({ children, menu }) => {
       </Head>
       <Header menu={menu} />
       <main>{children}</main>
+      <ExitPreviewButton />
     </div>
   );
 };
