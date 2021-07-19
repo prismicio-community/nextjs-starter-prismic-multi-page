@@ -6,6 +6,14 @@ const QuoteSlice = ({ slice }) => (
     <blockquote>
       {RichText.asText(slice.primary.quotetext)}
     </blockquote>
+    { slice.variation === 'quoteReference' ? 
+      <div>
+        <cite>
+          <RichText render={slice.primary.reference}/>
+        </cite>
+      </div>
+      : null
+    }
     <style jsx>{`
       .quote blockquote {
         display: block;
@@ -32,6 +40,19 @@ const QuoteSlice = ({ slice }) => (
       }
       .quote blockquote:after {
         content: close-quote;
+      }
+      .quote div {
+        width: 300px;
+        float: right;
+        margin: -36px 0px 0px 0px;
+      }
+      .quote div cite {
+        display: flex;
+        line-height: 18px;
+      }
+      .quote div cite:before {
+        content: '-';
+        margin: 16px 4px 0px 0px;
       }
       @media (max-width: 767px) {
         .quote {

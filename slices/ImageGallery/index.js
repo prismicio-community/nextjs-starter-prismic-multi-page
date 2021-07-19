@@ -1,13 +1,15 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
 import { Link } from 'prismic-reactjs'
-
 const ImageGallery = ({ slice }) => (
   <section className="image-gallery container">
     <RichText render={slice.primary.galleryTitle} />
     <div className="gallery">
       { slice?.items?.map((item, i) =>
-        <div key={i} className="gallery-item">
+        <div key={i} className={'gallery-item-'+slice.variation}>
+          { slice.variation === '3ColumnGrid' ? 
+            <RichText render={item.itemTitle} /> : null
+          }
           <img
             src={item.image.url}
             alt={item.image.alt}
@@ -43,12 +45,19 @@ const ImageGallery = ({ slice }) => (
         -webkit-justify-content: space-between; 
         justify-content: space-between; 
       }
-      .gallery-item {
+      .gallery-item-default-slice {
         -webkit-box-flex: 0 1 48%;
         -moz-box-flex:  0 1 48%;
         -webkit-flex:  0 1 48%;
         -ms-flex:  0 1 48%;
         flex: 0 1 48%;
+      }
+      .gallery-item-3ColumnGrid {
+        -webkit-box-flex: 0 1 33%;
+        -moz-box-flex:  0 1 33%;
+        -webkit-flex:  0 1 33%;
+        -ms-flex:  0 1 33%;
+        flex: 0 1 33%;
       }
       .gallery-link {
         margin-top: -20px;

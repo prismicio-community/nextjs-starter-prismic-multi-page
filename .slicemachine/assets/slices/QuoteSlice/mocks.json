@@ -1,0 +1,17 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "quote_slice",
+    "items": [],
+    "primary": {
+      "quotetext": [
+        {
+          "type": "paragraph",
+          "text": "Excepteur irure consectetur proident laborum nostrud amet aliquip fugiat enim dolor ut. Reprehenderit velit ad proident cupidatat.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]
