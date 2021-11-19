@@ -5,6 +5,12 @@
     ]
   ],
   "plugins": [
+    [
+      "styled-jsx/babel",
+      {
+        "sourceMaps": true
+      }
+    ],
     "react-require"
   ]
 }
