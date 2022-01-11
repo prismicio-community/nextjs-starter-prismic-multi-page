@@ -10,13 +10,11 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "prepublishOnly": "node ./node_modules/sm-commons/scripts/bundle",
-    "slicemachine": "start-slicemachine --port 9999",
-    "storybook": "start-storybook -p 8888",
-    "build-storybook": "build-storybook"
+    "slicemachine": "start-slicemachine --port 9999"
   },
   "dependencies": {
-    "@prismicio/client": "^4.0.0",
+    "@prismicio/client": "^5.1.0",
+    "@prismicio/slice-canvas-renderer-react": "0.0.7",
     "js-cookie": "^2.2.1",
     "next": "^12.0.4",
     "next-slicezone": "^0.1.2",
@@ -25,11 +23,8 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@storybook/react": "^6.3.12",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-react-require": "^3.1.3",
     "shx": "^0.3.3",
-    "slice-machine-ui": "^0.1.0",
+    "slice-machine-ui": "^0.1.2-slicecanvas.6",
     "sm-commons": "^0.0.23"
   }
 }

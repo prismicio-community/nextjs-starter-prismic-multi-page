@@ -1,23 +1,27 @@
-import { Client } from "../prismic-configuration";
+import { Client } from "../utils/prismicHelpers";
 import SliceZone from "next-slicezone";
-import { useGetStaticProps } from "next-slicezone/hooks";
 
-import resolver from "../sm-resolver.js";
 import Layout from "./../components/Layout";
+import * as Slices from "../slices";
+const resolver = ({ sliceName }) => Slices[sliceName];
 
-const Page = (props) => {
+const Home = (props) => {
   return (
     <Layout menu={props.menu}>
-      <SliceZone {...props} resolver={resolver} />
+      <SliceZone slices={props.slices} resolver={resolver} />
     </Layout>
   );
 };
 
-// Fetch content from prismic
-export const getStaticProps = useGetStaticProps({
-  client: Client(),
-  type: 'home-page', 
-  queryType: 'single',
-})
+export async function getStaticProps() {
 
-export default Page;
+  const doc = await Client().getSingle("home-page") || null
+
+  return {
+    props: {
+      slices: doc.data.slices
+    }
+  }
+}
+
+export default Home;
