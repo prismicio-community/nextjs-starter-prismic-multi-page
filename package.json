@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "shx": "^0.3.3",
-    "slice-machine-ui": "^0.1.2-slicecanvas.6",
+    "slice-machine-ui": "^0.2.0-alpha.23",
     "sm-commons": "^0.0.23"
   }
 }
