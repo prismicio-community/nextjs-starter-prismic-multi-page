@@ -1,6 +1,3 @@
-import Prismic from "@prismicio/client";
-import Link from "next/link";
-
 import smConfig from "./sm.json";
 
 if (!smConfig.apiEndpoint) {
@@ -22,17 +19,7 @@ export const linkResolver = (doc) => {
   return "/";
 };
 
-export const customLink = (type, element, content, children, index) => (
-  <Link
-    key={index}
-    href={linkResolver(element.data)}
-    as={linkResolver(element.data)}
-  >
-    <a>{content}</a>
-  </Link>
-);
-
-export const Router = {
+export const router = {
   routes: [
     {
       "type":"page",
@@ -43,12 +30,4 @@ export const Router = {
       "path":"/"
     },
   ],
-  href: (type) => {
-    const route = Router.routes.find(r => r.type === type);
-    return route && route.href;
-  }
 };
-
-export const Client = (req = null, options = {}) => (
-  Prismic.client(apiEndpoint, Object.assign({ routes: Router.routes }, options))
-);
