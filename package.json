@@ -22,9 +22,9 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@prismicio/slice-simulator-react": "^0.1.0",
+    "@prismicio/slice-simulator-react": "^0.1.1",
     "shx": "^0.3.3",
-    "slice-machine-ui": "^0.2.0-alpha.33",
+    "slice-machine-ui": "^0.2.0",
     "sm-commons": "^0.0.23"
   }
 }
