@@ -1,21 +1,12 @@
-import { Client, linkResolver } from "../../prismic-configuration"
+import { Client, linkResolver } from "../../prismicConfiguration";
+import { setPreviewData, redirectToPreviewURL } from '@prismicio/next';
 
 export default async (req, res) => {
-  const { token: ref, documentId } = req.query;
-  const redirectUrl = await Client(req)
-    .getPreviewResolver(ref, documentId)
-    .resolve(linkResolver, '/');
+  const client = Client({ req });
 
-  if (!redirectUrl) {
-    return res.status(401).json({ message: 'Invalid token' });
-  }
+  await setPreviewData({ req, res });
 
-  res.setPreviewData({ ref });
+  await redirectToPreviewURL({ req, res, client, linkResolver });
 
-  res.write(
-    `<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=${redirectUrl}" />
-    <script>window.location.href = '${redirectUrl}'</script>
-    </head>`
-  );
-  res.end();
+  return true
 };

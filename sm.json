@@ -1,5 +1,5 @@
 {
-  "apiEndpoint": "https://your-repo-name.cdn.prismic.io/api/v2",
+  "apiEndpoint": "https://nextjs-sm-tutorial-series.cdn.prismic.io/api/v2",
   "libraries": [
     "@/slices"
   ],
