@@ -1,7 +1,6 @@
 import React from 'react'
 import { asText, PrismicText } from '@prismicio/react'
 
-
 const QuoteSlice = ({ slice }) => (
   <section className="container quote">
     <blockquote>
