@@ -1,16 +1,15 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
-import { Link } from 'prismic-reactjs'
+import { PrismicLink, PrismicText } from '@prismicio/react'
 
 const FeaturedImage = ({ slice }) => (
   <section className="highlight container">
     <div>
-      <RichText render={slice.primary.title} />
-      <RichText render={slice.primary.headline} />
+      <PrismicText field={slice.primary.title} />
+      <PrismicText field={slice.primary.headline} />
       <p>
-        <a href={Link.url(slice.primary.link)}>
+        <PrismicLink field={slice.primary.link}>
           <span>{slice.primary.linkLabel}</span>
-        </a>
+        </PrismicLink>
       </p>
     </div>
     <div>

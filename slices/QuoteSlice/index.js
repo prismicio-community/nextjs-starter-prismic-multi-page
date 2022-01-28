@@ -1,15 +1,16 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import { asText, PrismicText } from '@prismicio/react'
+
 
 const QuoteSlice = ({ slice }) => (
   <section className="container quote">
     <blockquote>
-      {RichText.asText(slice.primary.quotetext)}
+      {asText(slice.primary.quotetext)}
     </blockquote>
     { slice.variation === 'quoteReference' ? 
       <div>
         <cite>
-          <RichText render={slice.primary.reference}/>
+          <PrismicText field={slice.primary.reference}/>
         </cite>
       </div>
       : null

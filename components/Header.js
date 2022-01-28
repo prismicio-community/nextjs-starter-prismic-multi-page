@@ -1,5 +1,6 @@
 import React from "react";
-import { RichText, Link } from 'prismic-reactjs'
+import { PrismicLink } from '@prismicio/react'
+import { asText } from '@prismicio/helpers';
 
 const Header = ({ menu = [] }) => (
     <header className="site-header">
@@ -56,9 +57,9 @@ const Links = ({menuLinks}) => {
         <ul>
           {menuLinks.map((menuLink, index) => (
             <li key={`menulink-${index}`}>
-              <a href={Link.url(menuLink.link)}>
-                {RichText.asText(menuLink.label)}
-              </a>
+              <PrismicLink field={menuLink.link}>
+                {asText(menuLink.label)}
+              </PrismicLink>
             </li>
           ))}
         </ul>

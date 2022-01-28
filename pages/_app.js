@@ -11,7 +11,8 @@ import {
 
 export default class MyApp extends NextApp {
   static async getInitialProps(appCtx) {
-    const menu = (await Client().getSingle("menu")) || {};
+    const client = Client();
+    const menu = (await client.getSingle("menu")) || {};
     return {
       props: {
         menu: menu

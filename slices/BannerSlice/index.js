@@ -1,17 +1,20 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
-import { Link } from 'prismic-reactjs'
+import { 
+  PrismicLink, 
+  PrismicText, 
+  asText 
+} from '@prismicio/react'
 
 const BannerSlice = ({ slice }) => (
     <section className="homepage-banner">
       <div className="banner-content container">
-        <h2 className="banner-title">{RichText.asText(slice.primary.title)}</h2>
+        <h2 className="banner-title">{asText(slice.primary.title)}</h2>
         <div className="banner-description">
-          <RichText render={slice.primary.description} />
+          <PrismicText field={slice.primary.description} />
         </div>
-        <a href={Link.url(slice.primary.link)}>
+        <PrismicLink field={slice.primary.link}>
           { slice.primary.linkLabel }
-        </a>
+        </PrismicLink>
       </div>
       <style jsx>{`
         .homepage-banner {
