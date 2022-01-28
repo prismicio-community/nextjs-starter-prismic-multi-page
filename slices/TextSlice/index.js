@@ -1,7 +1,7 @@
 import React from 'react';
 import { PrismicText } from '@prismicio/react'
 
-const TextSlice = ({ slice }) => (
+export const TextSlice = ({ slice }) => (
   <section className={`container ${ slice.variation }`}>
     <PrismicText field={slice.primary.text} />
     <style jsx>{`
@@ -14,5 +14,3 @@ const TextSlice = ({ slice }) => (
     `}</style>
   </section>
 );
-
-export default TextSlice;

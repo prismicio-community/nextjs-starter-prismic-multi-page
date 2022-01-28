@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrismicLink, PrismicText } from '@prismicio/react'
 
-const FeaturedImage = ({ slice }) => (
+export const FeaturedImage = ({ slice }) => (
   <section className="highlight container">
     <div>
       <PrismicText field={slice.primary.title} />
@@ -32,5 +32,3 @@ const FeaturedImage = ({ slice }) => (
       `}</style>
   </section>
 )
-
-export default FeaturedImage

@@ -1,11 +1,8 @@
 import React from 'react'
-import { 
-  PrismicLink, 
-  PrismicText, 
-  asText 
-} from '@prismicio/react'
+import { PrismicLink, PrismicText } from '@prismicio/react'
+import { asText } from '@prismicio/helpers'
 
-const BannerSlice = ({ slice }) => (
+export const BannerSlice = ({ slice }) => (
     <section className="homepage-banner">
       <div className="banner-content container">
         <h2 className="banner-title">{asText(slice.primary.title)}</h2>
@@ -71,5 +68,3 @@ const BannerSlice = ({ slice }) => (
       `}</style>
     </section>
 )
-
-export default BannerSlice

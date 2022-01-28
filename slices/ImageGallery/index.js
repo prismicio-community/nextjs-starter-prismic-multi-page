@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrismicLink, PrismicText } from '@prismicio/react'
 
-const ImageGallery = ({ slice }) => (
+export const ImageGallery = ({ slice }) => (
   <section className="image-gallery container">
     <PrismicText field={slice.primary.galleryTitle} />
     <div className="gallery">
@@ -82,5 +82,3 @@ const ImageGallery = ({ slice }) => (
     }</style>
   </section>
 )
-
-export default ImageGallery

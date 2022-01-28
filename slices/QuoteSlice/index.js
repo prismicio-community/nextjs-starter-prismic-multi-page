@@ -1,7 +1,8 @@
 import React from 'react'
-import { asText, PrismicText } from '@prismicio/react'
+import { PrismicText } from '@prismicio/react'
+import { asText } from '@prismicio/helpers'
 
-const QuoteSlice = ({ slice }) => (
+export const QuoteSlice = ({ slice }) => (
   <section className="container quote">
     <blockquote>
       {asText(slice.primary.quotetext)}
@@ -62,5 +63,3 @@ const QuoteSlice = ({ slice }) => (
     `}</style>
   </section>
 )
-
-export default QuoteSlice

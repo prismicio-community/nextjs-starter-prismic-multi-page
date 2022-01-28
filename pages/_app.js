@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import React from 'react';
 import NextApp from 'next/app';
+import Link from 'next/link';
 import { PrismicProvider } from '@prismicio/react';
 import { PrismicPreview } from '@prismicio/next';
 import { 
@@ -10,9 +11,8 @@ import {
 } from './../prismicConfiguration';
 
 export default class MyApp extends NextApp {
-  static async getInitialProps(appCtx) {
-    const client = Client();
-    const menu = (await client.getSingle("menu")) || {};
+  static async getInitialProps() {
+    const menu = await Client().getSingle("menu")
     return {
       props: {
         menu: menu

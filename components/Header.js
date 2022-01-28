@@ -5,7 +5,7 @@ import { asText } from '@prismicio/helpers';
 const Header = ({ menu = [] }) => (
     <header className="site-header">
       <a href="/" className="logo">
-        {RichText.asText(menu.data?.title)}
+        {asText(menu.data?.title)}
       </a>
       <Links menuLinks={menu.data?.menu_links} />
       <style jsx>{`

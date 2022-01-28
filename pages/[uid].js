@@ -16,7 +16,7 @@ const Page = (props) => {
 };
 
 // Fetch content from prismic
-export async function getStaticProps({ context }) {
+export async function getStaticProps(context) {
 
   const doc = await Client({context}).getByUID("page", context.params.uid) || {}
 
