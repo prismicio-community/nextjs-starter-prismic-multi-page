@@ -7,7 +7,7 @@ export const BannerSlice = ({ slice }) => (
       <div className="banner-content container">
         <h2 className="banner-title">{asText(slice.primary.title)}</h2>
         <div className="banner-description">
-          <PrismicText field={slice.primary.description} />
+          <PrismicText className="test" field={slice.primary.description} />
         </div>
         <PrismicLink field={slice.primary.link}>
           { slice.primary.linkLabel }

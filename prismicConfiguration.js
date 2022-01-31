@@ -11,7 +11,7 @@ if (!smConfig.apiEndpoint) {
 export const endpoint = smConfig.apiEndpoint;
 
 // -- Prismic Repo Name //Regex to get repo ID
-export const repositoryName = /([a-zA-Z0-9-]+)?(\.cdn)?\.prismic\.io/.exec(smConfig.apiEndpoint)[1]
+export const repositoryName = new URL(endpoint).hostname.split('.')[0]
 
 // -- Access Token if the repository is not public
 // Generate a token in your dashboard and configure it here if your repository is private
