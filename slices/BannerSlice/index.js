@@ -9,9 +9,19 @@ export const BannerSlice = ({ slice }) => (
         <div className="banner-description">
           <PrismicText className="test" field={slice.primary.description} />
         </div>
-        <PrismicLink field={slice.primary.link}>
-          { slice.primary.linkLabel }
-        </PrismicLink>
+          <PrismicLink 
+            style={{ 
+              background:'#ffffff', 
+              borderRadius:'7px', 
+              color:'#484d52', 
+              fontSize:'14px', 
+              fontWeight:'700', 
+              padding:'15px 40px'
+            }} 
+            field={slice.primary.link}
+          >
+            { slice.primary.linkLabel }
+          </PrismicLink>
       </div>
       <style jsx>{`
         .homepage-banner {

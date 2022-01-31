@@ -14,14 +14,12 @@
   },
   "dependencies": {
     "@prismicio/next": "^0.0.1",
-    "js-cookie": "^2.2.1",
     "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "slice-machine-ui": "^0.2.0",
     "@prismicio/slice-simulator-react": "^0.1.1",
-    "shx": "^0.3.3"
+    "slice-machine-ui": "^0.2.0"
   }
 }
