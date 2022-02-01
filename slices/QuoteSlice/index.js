@@ -1,5 +1,5 @@
 import React from 'react'
-import { PrismicText } from '@prismicio/react'
+import { PrismicRichText } from '@prismicio/react'
 import { asText } from '@prismicio/helpers'
 
 export const QuoteSlice = ({ slice }) => (
@@ -10,7 +10,7 @@ export const QuoteSlice = ({ slice }) => (
     { slice.variation === 'quoteReference' ? 
       <div>
         <cite>
-          <PrismicText field={slice.primary.reference}/>
+          <PrismicRichText field={slice.primary.reference}/>
         </cite>
       </div>
       : null

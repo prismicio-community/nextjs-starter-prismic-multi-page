@@ -1,5 +1,5 @@
 import React from 'react'
-import { PrismicLink, PrismicText } from '@prismicio/react'
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import { asText } from '@prismicio/helpers'
 
 export const BannerSlice = ({ slice }) => (
@@ -7,19 +7,9 @@ export const BannerSlice = ({ slice }) => (
       <div className="banner-content container">
         <h2 className="banner-title">{asText(slice.primary.title)}</h2>
         <div className="banner-description">
-          <PrismicText className="test" field={slice.primary.description} />
+          <PrismicRichText field={slice.primary.description} />
         </div>
-          <PrismicLink 
-            style={{ 
-              background:'#ffffff', 
-              borderRadius:'7px', 
-              color:'#484d52', 
-              fontSize:'14px', 
-              fontWeight:'700', 
-              padding:'15px 40px'
-            }} 
-            field={slice.primary.link}
-          >
+          <PrismicLink className="button-link" field={slice.primary.link}>
             { slice.primary.linkLabel }
           </PrismicLink>
       </div>
@@ -53,17 +43,6 @@ export const BannerSlice = ({ slice }) => (
           max-width: 490px;
           margin-left: auto;
           margin-right: auto;
-        }
-        a {
-          background: #ffffff;
-          border-radius: 7px;
-          color: #484d52;
-          font-size: 14px;
-          font-weight: 700;
-          padding: 15px 40px;
-        }
-        a:hover {
-          background: #c8c9cb;
         }
         @media (max-width: 767px) {
           .homepage-banner {

@@ -1,11 +1,11 @@
 import React from 'react'
-import { PrismicLink, PrismicText } from '@prismicio/react'
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 
 export const FeaturedImage = ({ slice }) => (
   <section className="highlight container">
     <div>
-      <PrismicText field={slice.primary.title} />
-      <PrismicText field={slice.primary.headline} />
+      <PrismicRichText field={slice.primary.title} />
+      <PrismicRichText field={slice.primary.headline} />
       <p>
         <PrismicLink field={slice.primary.link}>
           <span>{slice.primary.linkLabel}</span>

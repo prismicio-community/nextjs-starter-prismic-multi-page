@@ -1,9 +1,9 @@
 import React from 'react';
-import { PrismicText } from '@prismicio/react'
+import { PrismicRichText } from '@prismicio/react'
 
 export const TextSlice = ({ slice }) => (
   <section className={`container ${ slice.variation }`}>
-    <PrismicText field={slice.primary.text} />
+    <PrismicRichText field={slice.primary.text} />
     <style jsx>{`
       .default-slice {
         column-count: 1;

@@ -27,8 +27,8 @@ export default class MyApp extends NextApp {
         <PrismicProvider
           linkResolver={linkResolver}
           internalLinkComponent={({ href, children, ...props }) => (
-            <Link href={href} {...props}>
-              <a>{children}</a>
+            <Link href={href}>
+              <a {...props}>{children}</a>
             </Link>
           )}
         >

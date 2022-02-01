@@ -95,6 +95,19 @@ img {
   max-width: 100%;
 }
 
+/* Button component */
+.button-link {
+  background: #ffffff;
+  border-radius: 7px;
+  color: #484d52;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 40px;
+}
+.button-link:hover {
+  background: #c8c9cb;
+}
+
 /* General */
 header,
 footer {

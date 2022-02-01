@@ -1,20 +1,20 @@
 import React from 'react'
-import { PrismicLink, PrismicText } from '@prismicio/react'
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 
 export const ImageGallery = ({ slice }) => (
   <section className="image-gallery container">
-    <PrismicText field={slice.primary.galleryTitle} />
+    <PrismicRichText field={slice.primary.galleryTitle} />
     <div className="gallery">
       { slice?.items?.map((item, i) =>
         <div key={i} className={'gallery-item-'+slice.variation}>
           { slice.variation === '3ColumnGrid' ? 
-            <PrismicText field={item.itemTitle} /> : null
+            <PrismicRichText field={item.itemTitle} /> : null
           }
           <img
             src={item.image.url}
             alt={item.image.alt}
           />
-          <PrismicText field={item.imageDescription}/>
+          <PrismicRichText field={item.imageDescription}/>
           <p>
             <PrismicLink field={item.link}>
               <span>{item.linkLabel}</span>
