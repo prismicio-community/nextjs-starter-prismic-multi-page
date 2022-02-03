@@ -5,14 +5,14 @@ import Link from 'next/link';
 import { PrismicProvider } from '@prismicio/react';
 import { PrismicPreview } from '@prismicio/next';
 import { 
-  Client,
+  createClient,
   repositoryName,
   linkResolver 
-} from './../prismicConfiguration';
+} from './../prismicio';
 
 export default class MyApp extends NextApp {
   static async getInitialProps() {
-    const menu = await Client().getSingle("menu")
+    const menu = await createClient().getSingle('menu')
     return {
       props: {
         menu: menu
@@ -32,7 +32,7 @@ export default class MyApp extends NextApp {
             </Link>
           )}
         >
-          <Component {...pageProps} menu={props.menu} />
+          <Component {...pageProps} menu={props.menu}/>
         </PrismicProvider>
       </PrismicPreview>
     )

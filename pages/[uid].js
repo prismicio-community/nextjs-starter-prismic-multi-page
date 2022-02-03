@@ -1,4 +1,4 @@
-import { Client } from "../prismicConfiguration";
+import { createClient } from "../prismicio";
 import { SliceZone } from '@prismicio/react'
 
 import Layout from "./../components/Layout";
@@ -18,7 +18,7 @@ const Page = (props) => {
 // Fetch content from prismic
 export async function getStaticProps(context) {
 
-  const doc = await Client({context}).getByUID("page", context.params.uid) || {}
+  const doc = await createClient({context}).getByUID("page", context.params.uid) || {}
 
   return {
     props: {
@@ -29,11 +29,12 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
 
-  const documents = await Client().getAllByType('page')
+  const documents = await createClient().getAllByType('page')
   return {
     paths: documents.map(doc => `/${doc.uid}`),
     fallback: true,
   }
 }
+
 
 export default Page;

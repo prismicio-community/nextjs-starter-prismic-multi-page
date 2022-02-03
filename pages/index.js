@@ -1,4 +1,4 @@
-import { Client } from "../prismicConfiguration";
+import { createClient } from "../prismicio";
 import { SliceZone } from '@prismicio/react'
 
 import Layout from "./../components/Layout";
@@ -17,7 +17,7 @@ const Home = (props) => {
 
 export async function getStaticProps(context) {
 
-  const doc = await Client({context}).getSingle("home-page") || null
+  const doc = await createClient({context}).getSingle("home-page") || null
 
   return {
     props: {
