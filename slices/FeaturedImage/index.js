@@ -1,16 +1,15 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
-import { Link } from 'prismic-reactjs'
+import { PrismicRichText, PrismicLink } from '@prismicio/react'
 
 const FeaturedImage = ({ slice }) => (
   <section className="highlight container">
     <div>
-      <RichText render={slice.primary.title} />
-      <RichText render={slice.primary.headline} />
+      <PrismicRichText field={slice.primary.title} />
+      <PrismicRichText field={slice.primary.headline} />
       <p>
-        <a href={Link.url(slice.primary.link)}>
+        <PrismicLink field={slice.primary.link}>
           <span>{slice.primary.linkLabel}</span>
-        </a>
+        </PrismicLink>
       </p>
     </div>
     <div>
@@ -30,7 +29,7 @@ const FeaturedImage = ({ slice }) => (
           grid-template-columns: 1fr;
         }
       }
-      `}</style>
+    `}</style>
   </section>
 )
 

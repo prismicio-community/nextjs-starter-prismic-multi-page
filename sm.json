@@ -1,8 +1,6 @@
 {
-  "apiEndpoint": "https://your-repo-name.cdn.prismic.io/api/v2",
-  "libraries": [
-    "@/slices"
-  ],
+  "apiEndpoint": "https://your-repo-name.prismic.io/api/v2",
+  "libraries": ["@/slices"],
   "_latest": "0.2.0",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }

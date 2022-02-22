@@ -1,13 +1,13 @@
-import React from "react";
-import { RichText, Link } from 'prismic-reactjs'
+import React from 'react'
+import { PrismicText, PrismicLink } from '@prismicio/react'
 
 const Header = ({ menu = [] }) => (
-    <header className="site-header">
-      <a href="/" className="logo">
-        {RichText.asText(menu.data?.title)}
-      </a>
-      <Links menuLinks={menu.data?.menu_links} />
-      <style jsx>{`
+  <header className="site-header">
+    <a href="/" className="logo">
+      <PrismicText field={menu.data?.title} />
+    </a>
+    <Links menuLinks={menu.data?.menu_links} />
+    <style jsx>{`
         .site-header {
           height: 30px;
           padding: 20px 0;
@@ -28,14 +28,12 @@ const Header = ({ menu = [] }) => (
         }
         @media (max-width: 1060px) {
           .site-header {
-            padding-left: 20px;
-            padding-right: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
           }
         }
         @media (max-width: 767px) {
-          .site-header {
-            height: auto;
-          }
           .site-header {
             position: absolute;
             left: 0;
@@ -46,19 +44,19 @@ const Header = ({ menu = [] }) => (
             text-align: center;
           }
         `}</style>
-    </header>
-);
+  </header>
+)
 
-const Links = ({menuLinks}) => {
+const Links = ({ menuLinks }) => {
   if (menuLinks) {
     return (
       <nav>
         <ul>
           {menuLinks.map((menuLink, index) => (
             <li key={`menulink-${index}`}>
-              <a href={Link.url(menuLink.link)}>
-                {RichText.asText(menuLink.label)}
-              </a>
+              <PrismicLink field={menuLink.link}>
+                <PrismicText field={menuLink.label} />
+              </PrismicLink>
             </li>
           ))}
         </ul>
@@ -79,7 +77,7 @@ const Links = ({menuLinks}) => {
             font-weight: 700;
           }
           nav li a:hover {
-            color: #72767B;
+            color: #72767b;
           }
           @media (max-width: 767px) {
             nav {
@@ -92,11 +90,11 @@ const Links = ({menuLinks}) => {
               margin-right: 10px;
             }
           }
-          `}</style>
+        `}</style>
       </nav>
     )
   }
   return null
 }
 
-export default Header;
+export default Header

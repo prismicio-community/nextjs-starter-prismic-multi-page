@@ -1,28 +1,27 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import { PrismicText, PrismicRichText } from '@prismicio/react'
 
 const QuoteSlice = ({ slice }) => (
   <section className="container quote">
     <blockquote>
-      {RichText.asText(slice.primary.quotetext)}
+      <PrismicText field={slice.primary.quotetext} />
     </blockquote>
-    { slice.variation === 'quoteReference' ? 
+    {slice.variation === 'quoteReference' ? (
       <div>
         <cite>
-          <RichText render={slice.primary.reference}/>
+          <PrismicRichText field={slice.primary.reference} />
         </cite>
       </div>
-      : null
-    }
+    ) : null}
     <style jsx>{`
       .quote blockquote {
         display: block;
-        font-family: 'Lora', Serif; 
+        font-family: 'Lora', Serif;
         font-size: 36px;
         font-style: italic;
-        font-weight: normal; 
-        color: #484D52; 
-        letter-spacing : 1.14;
+        font-weight: normal;
+        color: #484d52;
+        letter-spacing: 1.14;
         line-height: 1.5em;
         text-align: center;
       }
@@ -55,7 +54,7 @@ const QuoteSlice = ({ slice }) => (
         margin: 16px 4px 0px 0px;
       }
       @media (max-width: 767px) {
-        .quote {
+        .quote blockquote {
           font-size: 20px;
         }
       }
