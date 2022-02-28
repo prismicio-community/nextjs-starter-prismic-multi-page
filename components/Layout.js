@@ -1,9 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import Header from './Header'
-import ExitPreviewButton from './ExitPreviewButton'
 
-const Layout = ({ children, menu, doc, meta }) => {
+const Layout = ({ children, menu, doc }) => {
   const title = doc.data.meta_title
   const description = doc.data.meta_description
   return (
@@ -15,9 +14,8 @@ const Layout = ({ children, menu, doc, meta }) => {
           content={description ? description : 'Page Description'}
         />
       </Head>
-      <Header menu={menu} />
+      <Header menu={menu} doc={doc} />
       <main>{children}</main>
-      <ExitPreviewButton />
     </div>
   )
 }

@@ -1,9 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { apiEndpoint } from './../prismicConfiguration'
+import { repositoryName } from 'prismicio'
 
-const prismicRepoName = /([a-zA-Z0-9-]+)?(\.cdn)?\.prismic\.io/.exec(
-  apiEndpoint
-)[1] //Regex to get repo ID
 export default class extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -13,16 +10,15 @@ export default class extends Document {
   render() {
     return (
       <Html lang="en-us">
-        <Head>
-          <script
-            async
-            defer
-            src={`//static.cdn.prismic.io/prismic.js?repo=${prismicRepoName}&new=true`}
-          />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
+          <script
+            async
+            defer
+            src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${repositoryName}`}
+          />
         </body>
       </Html>
     )

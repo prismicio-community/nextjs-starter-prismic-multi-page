@@ -1,19 +1,16 @@
 {
-  "name": "slice-machine-tutorial-series-next",
-  "version": "0.0.0",
-  "description": "An awesome Slice Library made with Next.js",
-  "author": "<author>",
-  "license": "MIT",
-  "main": "slices/index.js",
+  "name": "slice-machine-prismic-next-project",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
     "slicemachine": "start-slicemachine --port 9999"
   },
   "dependencies": {
     "@prismicio/client": "^6.3.0",
+    "@prismicio/next": "^0.0.5",
     "@prismicio/react": "^2.0.6",
     "@slicemachine/init": "^1.1.1",
     "js-cookie": "^3.0.1",

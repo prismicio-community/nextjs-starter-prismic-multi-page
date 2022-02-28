@@ -1,15 +1,15 @@
-import { Client } from '../utils/prismicHelpers'
-import { queryRepeatableDocuments } from '../utils/queries'
+import React from 'react'
 import { SliceZone } from '@prismicio/react'
+import { client } from 'prismicio'
 
 import Layout from './../components/Layout'
 import * as Slices from '../slices'
 
 const Page = (props) => {
   return (
-    <Layout menu={props.menu} doc={props.doc} meta={props.meta}>
+    <Layout menu={props.menu} doc={props.doc}>
       <SliceZone
-        slices={props.slices}
+        slices={props.doc.data.body}
         components={{
           banner_slice: Slices.BannerSlice,
           featured_image: Slices.FeaturedImage,
@@ -25,19 +25,17 @@ const Page = (props) => {
 
 // Fetch content from prismic
 export async function getStaticProps({ params }) {
-  const doc = (await Client().getByUID('page', params.uid)) || {}
+  const doc = await client.getByUID('page', params.uid)
 
   return {
     props: {
       doc: doc,
-      metadata: doc.data.slices1,
-      slices: doc.data.body,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
+  const documents = await client.getAllByType('page')
   return {
     paths: documents.map((doc) => `/${doc.uid}`),
     fallback: true,

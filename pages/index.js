@@ -1,14 +1,15 @@
-import { Client } from '../utils/prismicHelpers'
+import React from 'react'
 import { SliceZone } from '@prismicio/react'
+import { client } from 'prismicio'
 
-import Layout from './../components/Layout'
-import * as Slices from '../slices'
+import Layout from 'components/Layout'
+import * as Slices from 'slices'
 
 const Home = (props) => {
   return (
     <Layout menu={props.menu} doc={props.doc}>
       <SliceZone
-        slices={props.slices}
+        slices={props.doc.data.slices}
         components={{
           banner_slice: Slices.BannerSlice,
           featured_image: Slices.FeaturedImage,
@@ -23,12 +24,11 @@ const Home = (props) => {
 }
 
 export async function getStaticProps() {
-  const doc = (await Client().getSingle('home-page')) || null
+  const doc = await client.getSingle('home-page')
 
   return {
     props: {
       doc: doc,
-      slices: doc.data.slices,
     },
   }
 }
