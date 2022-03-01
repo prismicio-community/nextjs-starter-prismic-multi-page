@@ -1,8 +1,8 @@
-import React from 'react';
-import { PrismicRichText } from '@prismicio/react'
+import React from "react";
+import { PrismicRichText } from "@prismicio/react";
 
 export const TextSlice = ({ slice }) => (
-  <section className={`container ${ slice.variation }`}>
+  <section className={`container ${slice.variation}`}>
     <PrismicRichText field={slice.primary.text} />
     <style jsx>{`
       .default-slice {

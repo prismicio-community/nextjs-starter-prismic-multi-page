@@ -1,29 +1,26 @@
-import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-import { asText } from '@prismicio/helpers'
+import React from "react";
+import { PrismicRichText } from "@prismicio/react";
+import { asText } from "@prismicio/helpers";
 
 export const QuoteSlice = ({ slice }) => (
   <section className="container quote">
-    <blockquote>
-      {asText(slice.primary.quotetext)}
-    </blockquote>
-    { slice.variation === 'quoteReference' ? 
+    <blockquote>{asText(slice.primary.quotetext)}</blockquote>
+    {slice.variation === "quoteReference" ? (
       <div>
         <cite>
-          <PrismicRichText field={slice.primary.reference}/>
+          <PrismicRichText field={slice.primary.reference} />
         </cite>
       </div>
-      : null
-    }
+    ) : null}
     <style jsx>{`
       .quote blockquote {
         display: block;
-        font-family: 'Lora', Serif; 
+        font-family: "Lora", Serif;
         font-size: 36px;
         font-style: italic;
-        font-weight: normal; 
-        color: #484D52; 
-        letter-spacing : 1.14;
+        font-weight: normal;
+        color: #484d52;
+        letter-spacing: 1.14;
         line-height: 1.5em;
         text-align: center;
       }
@@ -31,7 +28,7 @@ export const QuoteSlice = ({ slice }) => (
       .quote blockquote:after {
         color: #e9e9e9;
         content: open-quote;
-        font-family: 'Lora', Serif;
+        font-family: "Lora", Serif;
         font-size: 2.5em;
         font-weight: 900;
         line-height: 0.1em;
@@ -52,7 +49,7 @@ export const QuoteSlice = ({ slice }) => (
         line-height: 18px;
       }
       .quote div cite:before {
-        content: '-';
+        content: "-";
         margin: 16px 4px 0px 0px;
       }
       @media (max-width: 767px) {
@@ -62,4 +59,4 @@ export const QuoteSlice = ({ slice }) => (
       }
     `}</style>
   </section>
-)
+);

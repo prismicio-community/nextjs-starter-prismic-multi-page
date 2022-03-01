@@ -1,5 +1,5 @@
-import React from 'react'
-import { PrismicLink, PrismicRichText } from '@prismicio/react'
+import React from "react";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 
 export const FeaturedImage = ({ slice }) => (
   <section className="highlight container">
@@ -29,6 +29,6 @@ export const FeaturedImage = ({ slice }) => (
           grid-template-columns: 1fr;
         }
       }
-      `}</style>
+    `}</style>
   </section>
-)
+);

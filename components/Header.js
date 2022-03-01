@@ -1,14 +1,14 @@
 import React from "react";
-import { PrismicLink } from '@prismicio/react'
-import { asText } from '@prismicio/helpers';
+import { PrismicLink } from "@prismicio/react";
+import { asText } from "@prismicio/helpers";
 
 const Header = ({ menu = [] }) => (
-    <header className="site-header">
-      <a href="/" className="logo">
-        {asText(menu.data?.title)}
-      </a>
-      <Links menuLinks={menu.data?.menu_links} />
-      <style jsx>{`
+  <header className="site-header">
+    <a href="/" className="logo">
+      {asText(menu.data?.title)}
+    </a>
+    <Links menuLinks={menu.data?.menu_links} />
+    <style jsx>{`
         .site-header {
           height: 30px;
           padding: 20px 0;
@@ -47,10 +47,10 @@ const Header = ({ menu = [] }) => (
             text-align: center;
           }
         `}</style>
-    </header>
+  </header>
 );
 
-const Links = ({menuLinks}) => {
+const Links = ({ menuLinks }) => {
   if (menuLinks) {
     return (
       <nav>
@@ -80,7 +80,7 @@ const Links = ({menuLinks}) => {
             font-weight: 700;
           }
           nav li a:hover {
-            color: #72767B;
+            color: #72767b;
           }
           @media (max-width: 767px) {
             nav {
@@ -93,11 +93,11 @@ const Links = ({menuLinks}) => {
               margin-right: 10px;
             }
           }
-          `}</style>
+        `}</style>
       </nav>
-    )
+    );
   }
-  return null
-}
+  return null;
+};
 
 export default Header;

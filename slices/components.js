@@ -1,9 +1,9 @@
-import { BannerSlice } from './BannerSlice'
-import { FeaturedImage } from './FeaturedImage'
-import { FullWidthImage } from './FullWidthImage'
-import { ImageGallery } from './ImageGallery'
-import { QuoteSlice } from './QuoteSlice'
-import { TextSlice } from './TextSlice'
+import { BannerSlice } from "./BannerSlice";
+import { FeaturedImage } from "./FeaturedImage";
+import { FullWidthImage } from "./FullWidthImage";
+import { ImageGallery } from "./ImageGallery";
+import { QuoteSlice } from "./QuoteSlice";
+import { TextSlice } from "./TextSlice";
 
 export const components = {
   banner_slice: BannerSlice,
@@ -12,4 +12,4 @@ export const components = {
   image_gallery: ImageGallery,
   quote_slice: QuoteSlice,
   text_slice: TextSlice,
-}
+};

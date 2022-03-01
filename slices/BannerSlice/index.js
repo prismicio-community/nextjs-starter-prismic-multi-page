@@ -1,59 +1,63 @@
-import React from 'react'
-import { PrismicLink, PrismicRichText } from '@prismicio/react'
-import { asText } from '@prismicio/helpers'
+import React from "react";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { asText } from "@prismicio/helpers";
 
 export const BannerSlice = ({ slice }) => (
-    <section className="homepage-banner">
-      <div className="banner-content container">
-        <h2 className="banner-title">{asText(slice.primary.title)}</h2>
-        <div className="banner-description">
-          <PrismicRichText field={slice.primary.description} />
-        </div>
-          <PrismicLink className="button-link" field={slice.primary.link}>
-            { slice.primary.linkLabel }
-          </PrismicLink>
+  <section className="homepage-banner">
+    <div className="banner-content container">
+      <h2 className="banner-title">{asText(slice.primary.title)}</h2>
+      <div className="banner-description">
+        <PrismicRichText field={slice.primary.description} />
       </div>
-      <style jsx>{`
+      <PrismicLink className="button-link" field={slice.primary.link}>
+        {slice.primary.linkLabel}
+      </PrismicLink>
+    </div>
+    <style jsx>{`
+      .homepage-banner {
+        font-family: "Lato", sans-serif;
+        margin: 0 0 80px 0;
+        padding: 6em 0 6em;
+        background-position: center center;
+        background-size: cover;
+        color: #ffffff;
+        line-height: 1.75;
+        text-align: center;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url(${slice.primary.background.url});
+      }
+      .banner-content {
+        text-align: center;
+      }
+      .banner-title {
+        width: 90%;
+        max-width: 490px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #ffffff;
+        font-size: 70px;
+        font-weight: 900;
+        line-height: 70px;
+      }
+      .banner-description {
+        width: 90%;
+        max-width: 490px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 767px) {
         .homepage-banner {
-          font-family: 'Lato', sans-serif;
-          margin: 0 0 80px 0;
-          padding: 6em 0 6em;
-          background-position: center center;
-          background-size: cover;
-          color: #ffffff;
-          line-height: 1.75;
-          text-align: center;
-          background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${ slice.primary.background.url });
-        }
-        .banner-content {
-          text-align: center;
+          margin: 0 0 40px;
+          padding: 10em 0 6em;
         }
         .banner-title {
-          width: 90%;
-          max-width: 490px;
-          margin-left: auto;
-          margin-right: auto;
-          color: #ffffff;
-          font-size: 70px;
-          font-weight: 900;
-          line-height: 70px;
+          font-size: 50px;
+          line-height: 50px;
         }
-        .banner-description {
-          width: 90%;
-          max-width: 490px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        @media (max-width: 767px) {
-          .homepage-banner {
-            margin: 0 0 40px;
-            padding: 10em 0 6em;
-          }
-          .banner-title {
-            font-size: 50px;
-            line-height: 50px;
-          }
-        }
-      `}</style>
-    </section>
-)
+      }
+    `}</style>
+  </section>
+);
