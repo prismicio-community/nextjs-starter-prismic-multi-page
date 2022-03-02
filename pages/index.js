@@ -1,23 +1,27 @@
-import { createClient } from "../prismicio";
 import { SliceZone } from "@prismicio/react";
 
-import Layout from "./../components/Layout";
-import { components } from "../slices";
+import { createClient } from "../prismicio";
+import { components } from "../slices/components";
+import { Layout } from "./../components/Layout";
 
-const Home = (props) => {
+const Home = ({ menu, slices }) => {
   return (
-    <Layout menu={props.menu}>
-      <SliceZone slices={props.slices} components={components} />
+    <Layout menu={menu}>
+      <SliceZone slices={slices} components={components} />
     </Layout>
   );
 };
 
-export async function getStaticProps(context) {
-  const doc = (await createClient({ context }).getSingle("home-page")) || null;
+export async function getStaticProps({ previewData }) {
+  const client = createClient({ previewData });
+
+  const menu = await client.getSingle("menu");
+  const homePage = await client.getSingle("home-page");
 
   return {
     props: {
-      slices: doc.data.slices,
+      menu,
+      slices: homePage.data.slices,
     },
   };
 }

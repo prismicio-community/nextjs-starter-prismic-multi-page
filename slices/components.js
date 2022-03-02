@@ -1,15 +1,10 @@
-import { BannerSlice } from "./BannerSlice";
-import { FeaturedImage } from "./FeaturedImage";
-import { FullWidthImage } from "./FullWidthImage";
-import { ImageGallery } from "./ImageGallery";
-import { QuoteSlice } from "./QuoteSlice";
-import { TextSlice } from "./TextSlice";
+import dynamic from "next/dynamic";
 
 export const components = {
-  banner_slice: BannerSlice,
-  featured_image: FeaturedImage,
-  full_width_image: FullWidthImage,
-  image_gallery: ImageGallery,
-  quote_slice: QuoteSlice,
-  text_slice: TextSlice,
+  banner_slice: dynamic(() => import("./BannerSlice")),
+  featured_image: dynamic(() => import("./FeaturedImage")),
+  full_width_image: dynamic(() => import("./FullWidthImage")),
+  image_gallery: dynamic(() => import("./ImageGallery")),
+  quote_slice: dynamic(() => import("./QuoteSlice")),
+  text_slice: dynamic(() => import("./TextSlice")),
 };

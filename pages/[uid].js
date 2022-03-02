@@ -1,34 +1,39 @@
-import { createClient } from "../prismicio";
 import { SliceZone } from "@prismicio/react";
+import * as prismicH from "@prismicio/helpers";
 
-import Layout from "./../components/Layout";
-import { components } from "../slices";
+import { createClient, linkResolver } from "../prismicio";
+import { components } from "../slices/components";
+import { Layout } from "../components/Layout";
 
-const Page = (props) => {
+const Page = ({ menu, slices }) => {
   return (
-    <Layout menu={props.menu}>
-      <SliceZone slices={props.slices} components={components} />
+    <Layout menu={menu}>
+      <SliceZone slices={slices} components={components} />
     </Layout>
   );
 };
 
-// Fetch content from prismic
-export async function getStaticProps(context) {
-  const doc =
-    (await createClient({ context }).getByUID("page", context.params.uid)) ||
-    {};
+export async function getStaticProps({ params, previewData }) {
+  const client = createClient({ previewData });
+
+  const menu = await client.getSingle("menu");
+  const page = await client.getByUID("page", params.uid);
 
   return {
     props: {
-      slices: doc.data.body,
+      menu,
+      slices: page.data.body,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const documents = await createClient().getAllByType("page");
+  const client = createClient();
+
+  const pages = await client.getAllByType("page");
+
   return {
-    paths: documents.map((doc) => `/${doc.uid}`),
+    paths: pages.map((page) => prismicH.asLink(page, linkResolver)),
     fallback: true,
   };
 }
