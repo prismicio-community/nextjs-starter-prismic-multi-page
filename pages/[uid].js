@@ -34,6 +34,7 @@ export async function getStaticPaths() {
 
   return {
     paths: pages.map((page) => prismicH.asLink(page, linkResolver)),
+    fallback: false,
   };
 }
 
