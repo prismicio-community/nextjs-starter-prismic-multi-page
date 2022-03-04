@@ -2,7 +2,7 @@ import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
 import { createClient, linkResolver } from "../prismicio";
-import { components } from "../slices/components";
+import { components } from "../slices";
 import { Layout } from "../components/Layout";
 
 const Page = ({ menu, slices }) => {
