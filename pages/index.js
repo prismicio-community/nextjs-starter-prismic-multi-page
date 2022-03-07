@@ -1,8 +1,8 @@
 import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "../prismicio";
-import { components } from "../slices/components";
-import { Layout } from "./../components/Layout";
+import { components } from "../slices/index.js";
+import { Layout } from "../components/Layout";
 
 const Home = ({ menu, slices }) => {
   return (

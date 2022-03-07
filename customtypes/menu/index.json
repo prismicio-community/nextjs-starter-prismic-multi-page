@@ -6,11 +6,16 @@
     "Main": {
       "title": {
         "type": "StructuredText",
-        "config": { "placeholder": "Menu title...", "single": "heading1" }
+        "config": {
+          "placeholder": "Menu title...",
+          "single": "heading1"
+        }
       },
-      "menu_links": {
+      "menuLinks": {
         "type": "Group",
         "config": {
+          "label": "Menu Links",
+          "placeholder": "",
           "fields": {
             "label": {
               "type": "StructuredText",
@@ -22,10 +27,12 @@
             },
             "link": {
               "type": "Link",
-              "config": { "label": "Link", "placeholder": "Select a Link..." }
+              "config": {
+                "label": "Link",
+                "placeholder": "Select a Link..."
+              }
             }
-          },
-          "label": "Menu Links"
+          }
         }
       }
     }
