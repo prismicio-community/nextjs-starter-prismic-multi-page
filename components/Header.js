@@ -1,103 +1,22 @@
-import React from "react";
-import { PrismicLink } from '@prismicio/react'
-import { asText } from '@prismicio/helpers';
+import { PrismicLink, PrismicText } from "@prismicio/react";
 
-const Header = ({ menu = [] }) => (
-    <header className="site-header">
-      <a href="/" className="logo">
-        {asText(menu.data?.title)}
-      </a>
-      <Links menuLinks={menu.data?.menu_links} />
-      <style jsx>{`
-        .site-header {
-          height: 30px;
-          padding: 20px 0;
-          color: #484d52;
-          font-weight: 700;
-        }
-        .site-header a {
-          color: #484d52;
-          font-weight: 700;
-        }
-        .site-header a:hover {
-          color: #72767B;
-        }
-        .site-header .logo {
-          display: inline-block;
-          font-size: 22px;
-          font-weight: 900;
-        }
-        @media (max-width: 1060px) {
-          .site-header {
-            padding-left: 20px;
-            padding-right: 20px;
-          }
-        }
-        @media (max-width: 767px) {
-          .site-header {
-            height: auto;
-          }
-          .site-header {
-            position: absolute;
-            left: 0;
-            right: 0;
-          }
-          .site-header .logo {
-            display: block;
-            text-align: center;
-          }
-        `}</style>
-    </header>
-);
-
-const Links = ({menuLinks}) => {
-  if (menuLinks) {
-    return (
-      <nav>
-        <ul>
-          {menuLinks.map((menuLink, index) => (
-            <li key={`menulink-${index}`}>
-              <PrismicLink field={menuLink.link}>
-                {asText(menuLink.label)}
+export const Header = ({ menu }) => (
+  <header className="relative -mb-px border-b border-neutral-200 bg-white px-6 py-4">
+    <div className="mx-auto flex max-w-5xl items-baseline md:items-center">
+      <PrismicLink href="/" className="relative -m-4 p-4 text-xl font-black">
+        <PrismicText field={menu.data?.title} />
+      </PrismicLink>
+      <nav className="flex-grow">
+        <ul className="-ml-5 -mt-5 flex justify-end">
+          {menu.data?.menuLinks.map((menuLink) => (
+            <li key={menuLink.label} className="pt-5 pl-5">
+              <PrismicLink field={menuLink.link} className="text-neutral-500">
+                <PrismicText field={menuLink.label} />
               </PrismicLink>
             </li>
           ))}
         </ul>
-        <style jsx>{`
-          nav {
-            float: right;
-          }
-          nav ul {
-            margin: 0;
-            padding-left: 0;
-          }
-          nav li {
-            display: inline-block;
-            margin-left: 40px;
-          }
-          nav li a {
-            color: #484d52;
-            font-weight: 700;
-          }
-          nav li a:hover {
-            color: #72767B;
-          }
-          @media (max-width: 767px) {
-            nav {
-              float: none;
-              text-align: center;
-            }
-            nav li {
-              display: inline-block;
-              margin-left: 10px;
-              margin-right: 10px;
-            }
-          }
-          `}</style>
       </nav>
-    )
-  }
-  return null
-}
-
-export default Header;
+    </div>
+  </header>
+);

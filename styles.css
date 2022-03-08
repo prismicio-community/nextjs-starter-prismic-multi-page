@@ -1,0 +1,12 @@
+@import "@fontsource/lato/400.css";
+@import "@fontsource/lato/700.css";
+@import "@fontsource/lato/900.css";
+@import "@fontsource/libre-baskerville/400-italic.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section.bg-white.py-12 + section.bg-white.py-12 {
+  @apply pt-0 md:pt-0;
+}

@@ -1,17 +1,14 @@
 # Prismic Slice Machine & Next.js Example Multi-Page Site
+
 > [Next.js](https://nextjs.org/) example multi-Page site with navigation project with content managed in [Prismic](https://prismic.io) and components built with Slice Machine
 
-## Check out the dedicated articles to get this project up and running
-> [Prismic project guide](https://prismic.io/docs/technologies/getting-started-with-slice-machine-nextjs)
+## Check out the article to get this project up and running
 
-OR
-
-> [Learn how to build this project from scratch](https://prismic.io/docs/technologies/tutorial-series-introduction-nextjs)
-
+> [Prismic project guide](https://prismic.io/docs/technologies/prismic-example-projects-nextjs)
 
 ### Learn more about using Prismic with Next.js
 
-[Prismic + Next.js documentation](https://prismic.io/docs/technologies/home-prismic-and-nextjs).
+[Prismic + Next.js documentation](https://prismic.io/docs/technologies/nextjs).
 
 ### License
 
