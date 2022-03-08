@@ -112,7 +112,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sm-tutorial-series/.slicemachine/assets/slices/BannerSlice/default-slice/preview.png",
+            "path": "/Users/philipsnow/prismic/nextjs-sample-site-with-navigation/.slicemachine/assets/slices/BannerSlice/default-slice/preview.png",
             "width": 1168,
             "height": 709
           }
@@ -229,7 +229,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sm-tutorial-series/.slicemachine/assets/slices/FeaturedImage/default-slice/preview.png",
+            "path": "/Users/philipsnow/prismic/nextjs-sample-site-with-navigation/.slicemachine/assets/slices/FeaturedImage/default-slice/preview.png",
             "width": 1168,
             "height": 290
           }
@@ -295,7 +295,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sm-tutorial-series/.slicemachine/assets/slices/FullWidthImage/default-slice/preview.png",
+            "path": "/Users/philipsnow/prismic/nextjs-sample-site-with-navigation/.slicemachine/assets/slices/FullWidthImage/default-slice/preview.png",
             "width": 1168,
             "height": 308
           }
@@ -487,7 +487,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sm-tutorial-series/.slicemachine/assets/slices/ImageGallery/default-slice/preview.png",
+            "path": "/Users/philipsnow/prismic/nextjs-sample-site-with-navigation/.slicemachine/assets/slices/ImageGallery/default-slice/preview.png",
             "width": 1168,
             "height": 1079
           }
@@ -577,7 +577,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sm-tutorial-series/.slicemachine/assets/slices/QuoteSlice/default-slice/preview.png",
+            "path": "/Users/philipsnow/prismic/nextjs-sample-site-with-navigation/.slicemachine/assets/slices/QuoteSlice/default-slice/preview.png",
             "width": 1168,
             "height": 162
           }
@@ -673,12 +673,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sm-tutorial-series/.slicemachine/assets/slices/TextSlice/default-slice/preview.png",
+            "path": "/Users/philipsnow/prismic/nextjs-sample-site-with-navigation/.slicemachine/assets/slices/TextSlice/default-slice/preview.png",
             "width": 1168,
             "height": 104
           },
           "twoColumn": {
-            "path": "/Users/philipsnow/prismic/nextjs-sm-tutorial-series/.slicemachine/assets/slices/TextSlice/twoColumn/preview.png",
+            "path": "/Users/philipsnow/prismic/nextjs-sample-site-with-navigation/.slicemachine/assets/slices/TextSlice/twoColumn/preview.png",
             "width": 1168,
             "height": 72
           }
