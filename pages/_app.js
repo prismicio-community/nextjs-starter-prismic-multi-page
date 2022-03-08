@@ -1,23 +1,27 @@
-import "../styles/globals.css";
-import React from 'react'
-import NextApp from 'next/app'
-import { Client } from "../utils/prismicHelpers";
+import Link from "next/link";
+import { PrismicProvider } from "@prismicio/react";
+import { PrismicPreview } from "@prismicio/next";
 
-export default class MyApp extends NextApp {
-  static async getInitialProps(appCtx) {
-    const client = Client();
-    const menu = (await client.getSingle("menu")) || {};
-    return {
-      props: {
-        menu: menu
-      },
-    };
-  }
+import { repositoryName, linkResolver } from "../prismicio";
 
-  render() {
-    const { Component, pageProps, props } = this.props
-    return (
-      <Component {...pageProps} menu={props.menu} />
-    )
-  }
-}
+import "../styles.css";
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <>
+      <PrismicProvider
+        linkResolver={linkResolver}
+        internalLinkComponent={({ href, ...props }) => (
+          <Link href={href}>
+            <a {...props} />
+          </Link>
+        )}
+      >
+        <Component {...pageProps} />
+      </PrismicProvider>
+      <PrismicPreview repositoryName={repositoryName} />
+    </>
+  );
+};
+
+export default App;

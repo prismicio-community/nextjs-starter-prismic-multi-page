@@ -1,37 +1,41 @@
-import { Client } from "../utils/prismicHelpers";
-import { queryRepeatableDocuments } from '../utils/queries';
-import SliceZone from "next-slicezone";
+import { SliceZone } from "@prismicio/react";
+import * as prismicH from "@prismicio/helpers";
 
-import Layout from "./../components/Layout";
-import * as Slices from "../slices";
-const resolver = ({ sliceName }) => Slices[sliceName];
+import { createClient, linkResolver } from "../prismicio";
+import { components } from "../slices";
+import { Layout } from "../components/Layout";
 
-const Page = (props) => {
+const Page = ({ menu, slices }) => {
   return (
-    <Layout menu={props.menu}>
-      <SliceZone slices={props.slices} resolver={resolver} />
+    <Layout menu={menu}>
+      <SliceZone slices={slices} components={components} />
     </Layout>
   );
 };
 
-// Fetch content from prismic
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, previewData }) {
+  const client = createClient({ previewData });
 
-  const doc = await Client().getByUID("page", params.uid) || {}
+  const menu = await client.getSingle("menu");
+  const page = await client.getByUID("page", params.uid);
 
   return {
     props: {
-      slices: doc.data.body
-    }
-  }
+      menu,
+      slices: page.data.body,
+    },
+  };
 }
 
 export async function getStaticPaths() {
-  const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
+  const client = createClient();
+
+  const pages = await client.getAllByType("page");
+
   return {
-    paths: documents.map(doc => `/${doc.uid}`),
-    fallback: true,
-  }
+    paths: pages.map((page) => prismicH.asLink(page, linkResolver)),
+    fallback: false,
+  };
 }
 
 export default Page;
