@@ -11,7 +11,7 @@ const ImageGallery = ({ slice }) => (
       <div className="grid grid-cols-2 gap-y-8 gap-x-5 md:gap-x-8">
         {slice?.items?.map((item) => (
           <div
-            key={prismicH.asText(item.itemTitle)}
+            key={item.image.url}
             className="grid gap-4 md:gap-6"
           >
             <Image

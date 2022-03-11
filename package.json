@@ -18,7 +18,7 @@
     "@fontsource/libre-baskerville": "^4.5.2",
     "@prismicio/client": "^6.3.0",
     "@prismicio/helpers": "^2.2.0",
-    "@prismicio/next": "^0.0.1",
+    "@prismicio/next": "^0.1.0",
     "@prismicio/react": "^2.1.0",
     "next": "^12.0.4",
     "react": "^17.0.2",

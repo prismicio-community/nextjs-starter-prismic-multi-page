@@ -1,27 +1,25 @@
-import Link from "next/link";
-import { PrismicProvider } from "@prismicio/react";
-import { PrismicPreview } from "@prismicio/next";
+import Link from 'next/link'
+import { PrismicProvider } from '@prismicio/react'
+import { PrismicPreview } from '@prismicio/next'
+import { linkResolver, repositoryName } from '../prismicio'
 
-import { repositoryName, linkResolver } from "../prismicio";
+import "../styles.css"
 
-import "../styles.css";
-
-const App = ({ Component, pageProps }) => {
+export default function App({ Component, pageProps }) {
   return (
-    <>
-      <PrismicProvider
-        linkResolver={linkResolver}
-        internalLinkComponent={({ href, ...props }) => (
-          <Link href={href}>
-            <a {...props} />
-          </Link>
-        )}
-      >
+    <PrismicProvider
+      linkResolver={linkResolver}
+      internalLinkComponent={({ href, children, ...props }) => (
+        <Link href={href}>
+          <a {...props}>
+            {children}
+          </a>
+        </Link>
+      )}
+    >
+      <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />
-      </PrismicProvider>
-      <PrismicPreview repositoryName={repositoryName} />
-    </>
-  );
-};
-
-export default App;
+      </PrismicPreview>
+    </PrismicProvider>
+  )
+}
