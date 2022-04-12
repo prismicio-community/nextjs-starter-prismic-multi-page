@@ -1,21 +1,54 @@
-# Prismic Slice Machine & Next.js Example Multi-Page Site
+# Prismic + Next.js Multi-Page Starter
 
-> [Next.js](https://nextjs.org/) example multi-Page site with navigation project with content managed in [Prismic](https://prismic.io) and components built with Slice Machine
+Want to see an example of a multi-page website using [Prismic][prismic] and [Next.js][nextjs]? Look no further! This project provides all the code you need for a personal website with a homepage, information pages, and navigation.
 
-## Check out the article to get this project up and running
+- **Demo**: [Open live demo][live-demo]
+- **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation][prismic-docs]
 
-> [Prismic project guide](https://prismic.io/docs/technologies/prismic-example-projects-nextjs)
+&nbsp;
 
-### Learn more about using Prismic with Next.js
+<img src="https://user-images.githubusercontent.com/8601064/162868315-df886ee1-3a6f-4aea-a447-f4a132dd01a9.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
-[Prismic + Next.js documentation](https://prismic.io/docs/technologies/nextjs).
+&nbsp;
 
-### License
+## 🚀 Quick Start
 
-This software is licensed under the Apache 2 license, quoted below.
+To start a new project using this starter, run the following command in your terminal:
 
-Copyright 2021 [Prismic](http://prismic.io/).
+```sh
+npx prismic-cli@latest theme \
+  --theme-url https://github.com/prismicio-community/nextjs-starter-prismic-multi-page \
+  --conf sm.json
+```
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+This command will do the following:
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+1. Ask you to log in to Prismic or [create an account][prismic-sign-up].
+2. Create a new Prismic content repository.
+3. Start a new Next.js project using this starter.
+
+To learn more about working with Prismic, [**see the Prismic docs**][prismic-docs].
+
+## License
+
+```
+Copyright 2013-2022 Prismic <contact@prismic.io> (https://prismic.io)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+[prismic]: https://prismic.io/
+[prismic-docs]: https://prismic.io/docs/technologies/nextjs
+[prismic-sign-up]: https://prismic.io/dashboard/signup
+[nextjs]: https://nextjs.org/
+[live-demo]: https://nextjs-sm-tutorial-series-live.vercel.app/
