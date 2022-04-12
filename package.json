@@ -6,7 +6,8 @@
   "license": "MIT",
   "main": "slices/index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors gray,magenta",
+    "next:dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next export",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@prismicio/slice-simulator-react": "^0.1.1",
     "autoprefixer": "^10.4.2",
+    "concurrently": "^7.1.0",
     "postcss": "^8.4.7",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.8",
