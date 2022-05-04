@@ -10,20 +10,15 @@ import sm from "./sm.json";
 export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 
 /**
- * The project's Prismic Link Resolver. This function determines the URL for a given Prismic document.
+ * The project's Prismic Link Resolver. This function determines the URL for a
+ * given Prismic document.
  *
  * @type {prismicH.LinkResolverFunction}
  */
 export const linkResolver = (doc) => {
-  if (doc.type === "page") {
-    if (doc.uid === "home") {
-      return "/";
-    } else {
-      return `/${doc.uid}`;
-    }
+  if (doc.url === "/home") {
+    return "/";
   }
-
-  return "/";
 };
 
 /**
@@ -33,7 +28,13 @@ export const linkResolver = (doc) => {
  * @param config {prismicNext.CreateClientConfig} - A configuration object to
  */
 export const createClient = (config = {}) => {
-  const client = prismic.createClient(sm.apiEndpoint);
+  const client = prismic.createClient(sm.apiEndpoint, {
+    routes: [
+      { type: "page", path: "/:uid" },
+      { type: "settings", path: "/" },
+      { type: "navigation", path: "/" },
+    ],
+  });
 
   prismicNext.enableAutoPreviews({
     client,
