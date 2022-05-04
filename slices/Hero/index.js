@@ -1,6 +1,6 @@
 import NextImage from "next/image";
 import * as prismicH from "@prismicio/helpers";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
@@ -31,8 +31,21 @@ const Hero = ({ slice }) => {
         />
       )}
       <Bounded yPadding="lg" className="relative">
-        <div className="mx-auto max-w-2xl text-center">
-          <PrismicRichText field={slice.primary.text} components={components} />
+        <div className="grid justify-items-center gap-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <PrismicRichText
+              field={slice.primary.text}
+              components={components}
+            />
+          </div>
+          {prismicH.isFilled.link(slice.primary.buttonLink) && (
+            <PrismicLink
+              field={slice.primary.buttonLink}
+              className="rounded bg-white px-5 py-3 font-medium text-slate-800"
+            >
+              {slice.primary.buttonText || "Learn More"}
+            </PrismicLink>
+          )}
         </div>
       </Bounded>
     </section>
