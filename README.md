@@ -1,6 +1,6 @@
-# Prismic + Next.js Multi-Lang Starter
+# Prismic + Next.js Multi-Page Starter
 
-Want to see an example of a multi-language [Next.js][nextjs] website using [Prismic][prismic]? Look no further! In this project, we provide all the code you need for a website with a homepage, information pages, and navigation.
+Want to see an example of a multi-page website using [Prismic][prismic] and [Next.js][nextjs]? Look no further! This project provides all the code you need for a personal website with a homepage, information pages, and navigation.
 
 - **Demo**: [Open live demo][live-demo]
 - **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation][prismic-docs]
@@ -17,7 +17,7 @@ To start a new project using this starter, run the following command in your ter
 
 ```sh
 npx prismic-cli@latest theme \
-  --theme-url https://github.com/prismicio-community/nextjs-starter-prismic-multi-language \
+  --theme-url https://github.com/prismicio-community/nextjs-starter-prismic-multi-page \
   --conf sm.json
 ```
 
@@ -51,4 +51,4 @@ limitations under the License.
 [prismic-docs]: https://prismic.io/docs/technologies/nextjs
 [prismic-sign-up]: https://prismic.io/dashboard/signup
 [nextjs]: https://nextjs.org/
-[live-demo]: https://nextjs-starter-prismic-multi-language.vercel.app/
+[live-demo]: https://nextjs-starter-prismic-multi-page.vercel.app/
