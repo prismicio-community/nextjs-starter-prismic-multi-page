@@ -1,0 +1,35 @@
+{
+  "id": "9f0e9850-0b37-435c-841b-8cadba45a0e3",
+  "uid": "ipsa-quos-repellat",
+  "type": "navigation",
+  "data": {
+    "links": [
+      {
+        "label": [
+          {
+            "type": "heading3",
+            "text": "Repurpose e-business e-markets",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "label": [
+          {
+            "type": "heading3",
+            "text": "Transition dot-com eyeballs",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ]
+  }
+}

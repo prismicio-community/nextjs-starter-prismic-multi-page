@@ -1,38 +1,39 @@
 {
-  "name": "slice-machine-tutorial-series-next",
-  "version": "0.2.0",
-  "description": "An awesome Slice Library made with Next.js",
-  "author": "<author>",
-  "license": "MIT",
-  "main": "slices/index.js",
+  "name": "nextjs-starter-prismic-multi-page",
+  "version": "0.0.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Prismic <contact@prismic.io> (https://prismic.io)",
   "scripts": {
     "dev": "concurrently \"npm:next:dev\" \"npm:slicemachine\" --names \"next,slicemachine\" --prefix-colors gray,magenta",
     "next:dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "slicemachine": "start-slicemachine --port 9999",
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine",
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@fontsource/lato": "^4.5.2",
-    "@fontsource/libre-baskerville": "^4.5.2",
-    "@prismicio/client": "^6.3.0",
-    "@prismicio/helpers": "^2.2.0",
-    "@prismicio/next": "^0.1.0",
-    "@prismicio/react": "^2.1.0",
-    "next": "^12.0.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@prismicio/client": "^6.4.3",
+    "@prismicio/helpers": "^2.3.0",
+    "@prismicio/next": "^0.1.2",
+    "@prismicio/react": "^2.3.0",
+    "@prismicio/slice-simulator-react": "^0.2.2",
+    "clsx": "^1.1.1",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "@prismicio/slice-simulator-react": "^0.1.1",
-    "autoprefixer": "^10.4.2",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "autoprefixer": "^10.4.7",
     "concurrently": "^7.1.0",
-    "postcss": "^8.4.7",
-    "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.8",
-    "slice-machine-ui": "^0.3.1",
-    "tailwindcss": "^3.0.23"
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.10",
+    "slice-machine-ui": "^0.3.7",
+    "tailwindcss": "^3.0.24"
   }
 }

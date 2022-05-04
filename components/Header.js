@@ -1,22 +1,30 @@
-import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { PrismicLink, PrismicText } from "@prismicio/react";
+import * as prismicH from "@prismicio/helpers";
 
-export const Header = ({ menu }) => (
-  <header className="relative -mb-px border-b border-neutral-200 bg-white px-6 py-4">
-    <div className="mx-auto flex max-w-5xl items-baseline md:items-center">
-      <PrismicLink href="/" className="relative -m-4 p-4 text-xl font-black">
-        <PrismicRichText field={menu.data?.title} />
-      </PrismicLink>
-      <nav className="flex-grow">
-        <ul className="-ml-5 -mt-5 flex justify-end">
-          {menu.data?.menuLinks.map((menuLink) => (
-            <li key={menuLink.link.id} className="pt-5 pl-5">
-              <PrismicLink field={menuLink.link} className="text-neutral-500">
-                <PrismicRichText field={menuLink.label} />
-              </PrismicLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
-  </header>
-);
+import { Bounded } from "./Bounded";
+
+export const Header = ({ navigation, settings }) => {
+  return (
+    <Bounded as="header" yPadding="sm">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3 leading-none">
+        <PrismicLink href="/" className="text-xl font-semibold tracking-tight">
+          <PrismicText field={settings.data.siteTitle} />
+        </PrismicLink>
+        <nav>
+          <ul className="flex flex-wrap gap-6 md:gap-10">
+            {navigation.data?.links.map((item) => (
+              <li
+                key={prismicH.asText(item.label)}
+                className="font-semibold tracking-tight text-slate-800"
+              >
+                <PrismicLink field={item.link}>
+                  <PrismicText field={item.label} />
+                </PrismicLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </Bounded>
+  );
+};
