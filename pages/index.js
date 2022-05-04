@@ -1,29 +1,40 @@
+import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
+import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
-import { components } from "../slices/index.js";
+import { components } from "../slices/";
 import { Layout } from "../components/Layout";
 
-const Home = ({ menu, slices }) => {
+const Index = ({ page, navigation, settings }) => {
   return (
-    <Layout menu={menu}>
-      <SliceZone slices={slices} components={components} />
+    <Layout
+      alternateLanguages={page.alternate_languages}
+      navigation={navigation}
+      settings={settings}
+    >
+      <Head>
+        <title>{prismicH.asText(page.data.title)}</title>
+      </Head>
+      <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
 };
 
-export async function getStaticProps({ previewData }) {
+export default Index;
+
+export async function getStaticProps({ locale, previewData }) {
   const client = createClient({ previewData });
 
-  const menu = await client.getSingle("menu");
-  const homePage = await client.getSingle("home-page");
+  const page = await client.getByUID("page", "home", { lang: locale });
+  const navigation = await client.getSingle("navigation", { lang: locale });
+  const settings = await client.getSingle("settings", { lang: locale });
 
   return {
     props: {
-      menu,
-      slices: homePage.data.slices,
+      page,
+      navigation,
+      settings,
     },
   };
 }
-
-export default Home;

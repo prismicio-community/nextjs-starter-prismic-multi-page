@@ -1,14 +1,9 @@
-import Head from "next/head";
-
 import { Header } from "./Header";
 
-export const Layout = ({ children, menu }) => {
+export const Layout = ({ navigation, settings, children }) => {
   return (
-    <div className="text-neutral-700 antialiased">
-      <Head>
-        <title> Prismic Next.js Multi Page Website </title>
-      </Head>
-      <Header menu={menu} />
+    <div className="text-slate-800">
+      <Header navigation={navigation} settings={settings} />
       <main>{children}</main>
     </div>
   );
