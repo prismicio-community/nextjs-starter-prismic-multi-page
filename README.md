@@ -7,7 +7,7 @@ Want to see an example of a multi-language [Next.js][nextjs] website using [Pris
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/8601064/163303418-e72d7138-1bbd-4e2c-bc26-d8674a464438.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
+<img src="https://user-images.githubusercontent.com/8601064/166617932-eaaa1643-f086-4909-9868-56234f8da98d.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
 &nbsp;
 
