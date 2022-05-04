@@ -25,7 +25,7 @@
                     "label": "Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "heading1,paragraph,strong,em"
+                    "multi": "paragraph,heading1,strong,em"
                   }
                 },
                 "buttonLink": {
@@ -66,16 +66,21 @@
             "primary": {
               "text": [
                 {
+                  "type": "heading1",
+                  "text": "Repurpose enterprise paradigms",
+                  "spans": []
+                },
+                {
                   "type": "paragraph",
-                  "text": "Veniam nulla anim irure eu culpa.",
+                  "text": "Reprehenderit sint enim culpa magna in anim sint.",
                   "spans": []
                 }
               ],
               "buttonLink": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "https://prismic.io"
               },
-              "buttonText": "unleash intuitive vortals",
+              "buttonText": "recontextualize 24/7 e-services",
               "backgroundImage": {
                 "dimensions": {
                   "width": 900,
@@ -83,7 +88,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
               }
             }
           }
@@ -96,7 +101,7 @@
           "default": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/Hero/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 694
           }
         }
       },
@@ -198,12 +203,12 @@
           "default": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/Image/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 530
           },
           "banner": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/Image/banner/preview.png",
             "width": 800,
-            "height": 48
+            "height": 363
           }
         }
       },
@@ -394,7 +399,7 @@
           "default": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/ImageCards/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 1167
           }
         }
       },
@@ -464,7 +469,7 @@
           "default": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/Quote/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 392
           }
         }
       },
@@ -492,7 +497,7 @@
                     "label": "Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "heading1,heading2,heading3,paragraph,em,strong,hyperlink,list-item,o-list-item"
+                    "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
                   }
                 }
               },
@@ -531,7 +536,22 @@
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Velit exercitation commodo deserunt incididunt duis enim dolor magna. Laborum laborum id pariatur nisi adipisicing eu occaecat.",
+                  "text": "Officia tempor quis ut id officia. Nulla id irure eiusmod reprehenderit excepteur enim voluptate fugiat do elit ipsum nostrud Lorem Lorem aute.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "In anim aliqua cupidatat aute commodo elit exercitation Lorem anim sunt eiusmod labore aliquip sit eiusmod. Nisi velit sit Lorem exercitation reprehenderit duis nulla dolor pariatur aliqua tempor ex exercitation. Laboris officia cupidatat laborum cupidatat minim.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt eiusmod consequat proident consequat. Dolor qui incididunt esse mollit incididunt et.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Elit in ullamco enim dolore consectetur ipsum voluptate nostrud voluptate magna ullamco dolor. Ex consequat voluptate irure mollit ut reprehenderit proident enim exercitation enim laboris.",
                   "spans": []
                 }
               ]
@@ -546,7 +566,7 @@
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Duis esse tempor excepteur adipisicing labore Lorem fugiat adipisicing commodo est laborum exercitation minim dolore laboris. Magna Lorem elit Lorem ut commodo dolor elit labore qui labore officia ut dolore.",
+                  "text": "Velit aliquip dolore labore sint fugiat qui consequat. Ad eiusmod do adipisicing Lorem laborum id laborum dolore esse duis do velit.",
                   "spans": []
                 }
               ]
@@ -561,12 +581,12 @@
           "default": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/Text/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 516
           },
           "twoColumns": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/Text/twoColumns/preview.png",
             "width": 800,
-            "height": 48
+            "height": 276
           }
         }
       },
@@ -594,7 +614,7 @@
                     "label": "Text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "heading1,heading2,heading3,paragraph,em,hyperlink,list-item,o-list-item,strong"
+                    "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
                   }
                 },
                 "image": {
@@ -666,8 +686,13 @@
             "primary": {
               "text": [
                 {
+                  "type": "heading1",
+                  "text": "Engineer customized ROI",
+                  "spans": []
+                },
+                {
                   "type": "paragraph",
-                  "text": "Aute laborum aliquip mollit. Incididunt qui eu ex mollit culpa velit ullamco voluptate aliquip dolore exercitation laboris aute.",
+                  "text": "Aliquip non nulla ex ullamco nulla. Occaecat nostrud laborum consectetur adipisicing. Incididunt sunt consequat non mollit dolore deserunt qui veniam esse fugiat elit nulla amet.",
                   "spans": []
                 }
               ],
@@ -678,7 +703,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1000&h=1200&fit=crop"
+                "url": "https://images.prismic.io/nextjs-starter-prismic-multi-page/fcb2333d-d2b2-4cdc-acdd-f9558703472d_anders-jilden-Sc5RKXLBjGg-unsplash.jpg?w=1000&h=1200&fit=crop"
               }
             }
           },
@@ -691,15 +716,15 @@
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Nisi est id pariatur aliquip enim sunt enim labore officia aute. Velit proident aliqua et irure ad enim.",
+                  "text": "Voluptate dolore ea et. Officia pariatur velit veniam velit cillum deserunt sit anim quis officia eiusmod. Eiusmod ipsum aute exercitation consectetur incididunt aliquip in elit esse do mollit velit duis.",
                   "spans": []
                 }
               ],
               "buttonLink": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
+                "url": "http://google.com"
               },
-              "buttonText": "architect compelling technologies",
+              "buttonText": "synthesize cutting-edge synergies",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -707,7 +732,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
               }
             }
           }
@@ -720,12 +745,12 @@
           "default": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/TextWithImage/default/preview.png",
             "width": 800,
-            "height": 48
+            "height": 656
           },
           "withButton": {
             "path": "/Users/angeloashmore/projects/prismic/nextjs-starter-prismic-multi-page/.slicemachine/assets/slices/TextWithImage/withButton/preview.png",
             "width": 800,
-            "height": 48
+            "height": 424
           }
         }
       }

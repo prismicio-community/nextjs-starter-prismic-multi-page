@@ -17,7 +17,7 @@
             "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading1,paragraph,strong,em"
+            "multi": "paragraph,heading1,strong,em"
           }
         },
         "buttonLink": {

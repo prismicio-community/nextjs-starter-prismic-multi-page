@@ -1,30 +1,37 @@
+import NextImage from "next/image";
+import * as prismicH from "@prismicio/helpers";
 import { PrismicRichText } from "@prismicio/react";
 
-const TextWithImage = ({ slice }) => (
-  <section>
-    <span className="title">
-      {slice.primary.title ? (
-        <PrismicRichText field={slice.primary.title} />
-      ) : (
-        <h2>Template slice, update me!</h2>
-      )}
-    </span>
-    {slice.primary.description ? (
-      <PrismicRichText field={slice.primary.description} />
-    ) : (
-      <p>start by editing this slice from inside Slice Machine!</p>
-    )}
-    <style jsx>{`
-      section {
-        max-width: 600px;
-        margin: 4em auto;
-        text-align: center;
-      }
-      .title {
-        color: #8592e0;
-      }
-    `}</style>
-  </section>
-);
+import { Bounded } from "../../components/Bounded";
+
+const TextWithImage = ({ slice }) => {
+  const image = slice.primary.image;
+
+  return (
+    <Bounded as="section" className="bg-white">
+      <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <div>
+          <PrismicRichText field={slice.primary.text} />
+        </div>
+        <div>
+          {prismicH.isFilled.image(image) && (
+            <div className="bg-gray-100">
+              <NextImage
+                src={prismicH.asImageSrc(image, {
+                  w: undefined,
+                  h: undefined,
+                })}
+                alt={image.alt}
+                width={image.dimensions.width}
+                height={image.dimensions.height}
+                layout="responsive"
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    </Bounded>
+  );
+};
 
 export default TextWithImage;

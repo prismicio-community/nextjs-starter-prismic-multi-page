@@ -8,11 +8,7 @@ import { Layout } from "../components/Layout";
 
 const Index = ({ page, navigation, settings }) => {
   return (
-    <Layout
-      alternateLanguages={page.alternate_languages}
-      navigation={navigation}
-      settings={settings}
-    >
+    <Layout navigation={navigation} settings={settings}>
       <Head>
         <title>{prismicH.asText(page.data.title)}</title>
       </Head>

@@ -17,7 +17,7 @@
             "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading1,heading2,heading3,paragraph,em,hyperlink,list-item,o-list-item,strong"
+            "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
           }
         },
         "image": {
