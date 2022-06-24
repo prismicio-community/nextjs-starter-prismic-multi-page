@@ -1,6 +1,6 @@
-import NextImage from "next/image";
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
@@ -21,16 +21,7 @@ const ImageCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <NextImage
-              src={prismicH.asImageSrc(image, {
-                w: undefined,
-                h: undefined,
-              })}
-              alt={image.alt}
-              width={image.dimensions.width}
-              height={image.dimensions.height}
-              layout="responsive"
-            />
+            <PrismicNextImage field={image} layout="responsive" />
           </ConditionalWrap>
         </div>
       )}

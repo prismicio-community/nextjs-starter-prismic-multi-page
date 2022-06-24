@@ -1,6 +1,6 @@
-import NextImage from "next/image";
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 
 import { Bounded } from "../../components/Bounded";
 import { Heading } from "../../components/Heading";
@@ -20,11 +20,8 @@ const Hero = ({ slice }) => {
   return (
     <section className="relative bg-slate-900 text-white">
       {prismicH.isFilled.image(backgroundImage) && (
-        <NextImage
-          src={prismicH.asImageSrc(backgroundImage, {
-            w: undefined,
-            h: undefined,
-          })}
+        <PrismicNextImage
+          field={backgroundImage}
           alt=""
           layout="fill"
           className="pointer-events-none select-none object-cover opacity-40"
