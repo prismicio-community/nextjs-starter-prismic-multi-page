@@ -33,6 +33,12 @@ To learn more about working with Prismic, [**see the Prismic docs**](https://pri
 
 To get started after creating your new project, go to [prismic.io/dashboard](https://prismic.io/dashboard), click on the repository for this website, and start editing.
 
+### Write an article
+
+To create a new article, click on the green pencil icon in the top-right corner of the screen, then select **Article**. After adding some content, click **Save** and then **Publish**.
+
+Your article will appear in the homepage feed.
+
 ### Create a page
 
 To create a page, click on the green pencil icon, then select **Page**.
@@ -45,7 +51,7 @@ To add a page to your navigation menu, go to the document list and open the **Na
 
 ### Preview documents
 
-In your repository, go to _Settings > Previews_. Under _Create a New Preview_, fill in the three fields:
+In your repository, go to *Settings > Previews*. Under *Create a New Preview*, fill in the three fields:
 
 - a name (like **Development** or **Production**)
 - the domain where your app is running (like <http://localhost:3000> or <https://www.yoursite.com>)
