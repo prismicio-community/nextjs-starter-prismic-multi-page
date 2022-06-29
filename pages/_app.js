@@ -85,7 +85,7 @@ export default function App({ Component, pageProps }) {
               <strong>👋 Welcome to your new website!</strong> To customize the
               code and content of this site,{' '}
               <a
-                href="https://github.com/prismicio-community/nextjs-starter-prismic-multi-language/tree/master/docs"
+                href="https://github.com/prismicio-community/nextjs-starter-prismic-multi-page/tree/master/docs"
                 target="_blank"
                 rel="noreferrer"
                 style={{ textDecoration: 'underline' }}
