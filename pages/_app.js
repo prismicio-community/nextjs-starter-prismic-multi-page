@@ -1,19 +1,19 @@
-import Link from 'next/link'
-import { PrismicLink, PrismicProvider } from '@prismicio/react'
-import { PrismicPreview } from '@prismicio/next'
+import Link from "next/link";
+import { PrismicLink, PrismicProvider } from "@prismicio/react";
+import { PrismicPreview } from "@prismicio/next";
 
-import { repositoryName, linkResolver } from '../prismicio'
-import { Heading } from '../components/Heading'
+import { repositoryName } from "../prismicio";
+import { Heading } from "../components/Heading";
 
-import '../styles/globals.css'
+import "../styles/globals.css";
 
 const NextLinkShim = ({ href, children, locale, ...props }) => {
   return (
     <Link href={href} locale={locale}>
       <a {...props}>{children}</a>
     </Link>
-  )
-}
+  );
+};
 
 const richTextComponents = {
   heading1: ({ children }) => (
@@ -60,35 +60,34 @@ const richTextComponents = {
       {children}
     </PrismicLink>
   ),
-}
+};
 
 export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
-      linkResolver={linkResolver}
       internalLinkComponent={NextLinkShim}
       richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>
         {/* TODO: Remove the following element once you have read the documentation. */}
-        {process.env.NODE_ENV === 'development' && (
+        {process.env.NODE_ENV === "development" && (
           <div
             style={{
-              background: '#5163ba',
-              padding: '1rem',
-              textAlign: 'center',
-              fontSize: '0.85rem',
-              color: '#fff',
+              background: "#5163ba",
+              padding: "1rem",
+              textAlign: "center",
+              fontSize: "0.85rem",
+              color: "#fff",
             }}
           >
             <p>
               <strong>👋 Welcome to your new website!</strong> To customize the
-              code and content of this site,{' '}
+              code and content of this site,{" "}
               <a
                 href="https://github.com/prismicio-community/nextjs-starter-prismic-multi-page/tree/master/docs"
                 target="_blank"
                 rel="noreferrer"
-                style={{ textDecoration: 'underline' }}
+                style={{ textDecoration: "underline" }}
               >
                 see the documentation
               </a>
@@ -99,5 +98,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </PrismicPreview>
     </PrismicProvider>
-  )
+  );
 }
