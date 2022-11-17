@@ -20,8 +20,8 @@ const routes = [
   },
   {
     type: "page",
-    path: "/",
     uid: "home",
+    path: "/",
   },
   {
     type: "settings",
