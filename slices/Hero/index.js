@@ -23,7 +23,7 @@ const Hero = ({ slice }) => {
         <PrismicNextImage
           field={backgroundImage}
           alt=""
-          layout="fill"
+          fill={true}
           className="pointer-events-none select-none object-cover opacity-40"
         />
       )}

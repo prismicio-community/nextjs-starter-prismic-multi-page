@@ -21,7 +21,7 @@ const ImageCard = ({ item }) => {
               </PrismicLink>
             )}
           >
-            <PrismicNextImage field={image} layout="responsive" />
+            <PrismicNextImage field={image} sizes="100vw" className="w-full" />
           </ConditionalWrap>
         </div>
       )}
@@ -48,7 +48,7 @@ const ImageCards = ({ slice }) => {
             <PrismicText field={slice.primary.heading} />
           </Heading>
         )}
-        <ul className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <ul className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
           {slice.items.map((item) => (
             <ImageCard key={item.image.url} item={item} />
           ))}

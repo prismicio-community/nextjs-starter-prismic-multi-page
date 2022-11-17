@@ -16,7 +16,11 @@ const TextWithImage = ({ slice }) => {
         <div>
           {prismicH.isFilled.image(image) && (
             <div className="bg-gray-100">
-              <PrismicNextImage field={image} layout="responsive" />
+              <PrismicNextImage
+                field={image}
+                sizes="100vw"
+                className="w-full"
+              />
             </div>
           )}
         </div>
