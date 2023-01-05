@@ -1,6 +1,8 @@
 {
   "_latest": "0.3.6",
-  "apiEndpoint": "https://nextjs-starter-prismic-multi-page.cdn.prismic.io/api/v2",
+  "apiEndpoint": "https://multipagetest859.cdn.prismic.io/api/v2",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
-  "libraries": ["@/slices"]
+  "libraries": [
+    "@/slices"
+  ]
 }
