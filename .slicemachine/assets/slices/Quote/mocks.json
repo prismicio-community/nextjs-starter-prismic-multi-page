@@ -1,0 +1,18 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "quote",
+    "items": [],
+    "primary": {
+      "quote": [
+        {
+          "type": "heading3",
+          "text": "Extend leading-edge e-commerce",
+          "spans": []
+        }
+      ],
+      "source": "transition robust synergies"
+    }
+  }
+]

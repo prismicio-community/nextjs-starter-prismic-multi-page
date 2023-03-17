@@ -1,0 +1,12 @@
+import MyComponent from '../../../../slices/TextWithImage';
+
+export default {
+  title: 'slices/TextWithImage'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"text_with_image","items":[],"primary":{"text":[{"type":"heading1","text":"Engineer customized ROI","spans":[]},{"type":"paragraph","text":"Aliquip non nulla ex ullamco nulla. Occaecat nostrud laborum consectetur adipisicing. Incididunt sunt consequat non mollit dolore deserunt qui veniam esse fugiat elit nulla amet.","spans":[]}],"image":{"dimensions":{"width":1000,"height":1200},"alt":"Placeholder image","copyright":null,"url":"https://images.prismic.io/nextjs-starter-prismic-multi-page/fcb2333d-d2b2-4cdc-acdd-f9558703472d_anders-jilden-Sc5RKXLBjGg-unsplash.jpg?w=1000&h=1200&fit=crop"}},"id":"_Default"}} />
+_Default.storyName = 'Default'
+
+export const _WithButton = () => <MyComponent slice={{"variation":"withButton","name":"With Button","slice_type":"text_with_image","items":[],"primary":{"text":[{"type":"paragraph","text":"Voluptate dolore ea et. Officia pariatur velit veniam velit cillum deserunt sit anim quis officia eiusmod. Eiusmod ipsum aute exercitation consectetur incididunt aliquip in elit esse do mollit velit duis.","spans":[]}],"buttonLink":{"link_type":"Web","url":"http://google.com"},"buttonText":"synthesize cutting-edge synergies","image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"}},"id":"_WithButton"}} />
+_WithButton.storyName = 'With Button'
