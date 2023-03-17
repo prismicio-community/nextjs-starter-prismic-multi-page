@@ -1,6 +1,10 @@
 {
   "_latest": "0.3.6",
+<<<<<<< HEAD
   "apiEndpoint": "https://kaice.prismic.io/api/v2",
+=======
+  "apiEndpoint": "https://nextjs-starter-prismic-multi-page.cdn.prismic.io/api/v2",
+>>>>>>> origin/master
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
   "libraries": [
     "@/slices"
