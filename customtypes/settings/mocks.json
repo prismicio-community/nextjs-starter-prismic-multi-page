@@ -1,0 +1,15 @@
+[
+  {
+    "siteTitle": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading1",
+          "content": {
+            "text": "Cheese"
+          }
+        }
+      ]
+    }
+  }
+]

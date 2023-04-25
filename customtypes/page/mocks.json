@@ -1,0 +1,319 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "source"
+    },
+    "title": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading1",
+          "content": {
+            "text": "Farther"
+          }
+        }
+      ]
+    },
+    "parent": {
+      "__TYPE__": "LinkContent",
+      "value": {
+        "__TYPE__": "DocumentLink",
+        "id": "mock_document_id"
+      }
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": [
+        {
+          "key": "hero$99dfea07-bb82-45b5-86f4-603953219632",
+          "name": "hero",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "text": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Laboris nostrud non magna Lorem sunt aliquip cillum dolor veniam enim. Minim do aute esse. Incididunt magna ullamco culpa sit consequat commodo exercitation."
+                    }
+                  }
+                ]
+              },
+              "buttonLink": {
+                "__TYPE__": "LinkContent",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://prismic.io"
+                }
+              },
+              "buttonText": {
+                "__TYPE__": "FieldContent",
+                "value": "bound",
+                "type": "Text"
+              },
+              "backgroundImage": {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+                  "width": 3168,
+                  "height": 4752
+                },
+                "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+                "width": 3168,
+                "height": 4752,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "thumbnails": {}
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "quote$6e8fb18a-3fe5-4a3b-9925-6499eff63b8e",
+          "name": "quote",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "quote": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "heading3",
+                    "content": {
+                      "text": "Dance"
+                    }
+                  }
+                ]
+              },
+              "source": {
+                "__TYPE__": "FieldContent",
+                "value": "lake",
+                "type": "Text"
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "text$ce838efe-f73d-48af-b316-ec5e1453a370",
+          "name": "text",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "text": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Cillum sint ex magna tempor elit."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "image$548ea826-1576-495a-81ae-678dd7a72f67",
+          "name": "image",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "image": {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+                  "width": 3277,
+                  "height": 4092
+                },
+                "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+                "width": 3277,
+                "height": 4092,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "thumbnails": {}
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        },
+        {
+          "key": "image_cards$6a76abbf-f571-46fb-bdd3-9a137ca3e4ad",
+          "name": "image_cards",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "heading": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "heading1",
+                    "content": {
+                      "text": "Solution"
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": [
+                  [
+                    "image",
+                    {
+                      "__TYPE__": "ImageContent",
+                      "origin": {
+                        "id": "main",
+                        "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+                        "width": 12288,
+                        "height": 16384
+                      },
+                      "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?rect=0%2C4841%2C12288%2C6703&w=2200&h=1200",
+                      "width": 2200,
+                      "height": 1200,
+                      "edit": {
+                        "zoom": 1,
+                        "crop": {
+                          "x": 0,
+                          "y": 4841
+                        },
+                        "background": "transparent"
+                      },
+                      "thumbnails": {}
+                    }
+                  ],
+                  [
+                    "text",
+                    {
+                      "__TYPE__": "StructuredTextContent",
+                      "value": [
+                        {
+                          "type": "paragraph",
+                          "content": {
+                            "text": "Aliqua excepteur sunt ex ut anim et ea."
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    "buttonLink",
+                    {
+                      "__TYPE__": "LinkContent",
+                      "value": {
+                        "__TYPE__": "ExternalLink",
+                        "url": "http://twitter.com"
+                      }
+                    }
+                  ],
+                  [
+                    "buttonText",
+                    {
+                      "__TYPE__": "FieldContent",
+                      "value": "grandmother",
+                      "type": "Text"
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "text_with_image$6c662f2f-4516-4b96-bc10-836ad8e0e092",
+          "name": "text_with_image",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "text": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Ea consequat ex tempor culpa magna officia do velit ut id adipisicing amet ex elit esse."
+                    }
+                  }
+                ]
+              },
+              "image": {
+                "__TYPE__": "ImageContent",
+                "origin": {
+                  "id": "main",
+                  "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+                  "width": 8640,
+                  "height": 8640
+                },
+                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?rect=720%2C0%2C7200%2C8640&w=1000&h=1200",
+                "width": 1000,
+                "height": 1200,
+                "edit": {
+                  "zoom": 1,
+                  "crop": {
+                    "x": 720,
+                    "y": 0
+                  },
+                  "background": "transparent"
+                },
+                "thumbnails": {}
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
