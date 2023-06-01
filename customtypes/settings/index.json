@@ -1,6 +1,7 @@
 {
   "id": "settings",
   "label": "Settings",
+  "format": "custom",
   "repeatable": false,
   "status": true,
   "json": {
@@ -15,6 +16,5 @@
         }
       }
     }
-  },
-  "format": "custom"
+  }
 }
