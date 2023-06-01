@@ -1,8 +1,8 @@
-import * as prismicH from "@prismicio/helpers";
-import { PrismicRichText } from "@prismicio/react";
+import * as prismic from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 
-import { Bounded } from "../../components/Bounded";
+import { Bounded } from "@/components/Bounded";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 const TextWithImage = ({ slice }) => {
   const image = slice.primary.image;
@@ -14,7 +14,7 @@ const TextWithImage = ({ slice }) => {
           <PrismicRichText field={slice.primary.text} />
         </div>
         <div>
-          {prismicH.isFilled.image(image) && (
+          {prismic.isFilled.image(image) && (
             <div className="bg-gray-100">
               <PrismicNextImage
                 field={image}
