@@ -1,24 +1,25 @@
-import * as prismicH from "@prismicio/helpers";
-import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
+import * as prismic from "@prismicio/client";
+import { PrismicText } from "@prismicio/react";
+import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 
-import { Bounded } from "../../components/Bounded";
-import { Heading } from "../../components/Heading";
-import { ConditionalWrap } from "../../components/ConditionalWrap";
+import { Bounded } from "@/components/Bounded";
+import { Heading } from "@/components/Heading";
+import { ConditionalWrap } from "@/components/ConditionalWrap";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 const ImageCard = ({ item }) => {
   const image = item.image;
 
   return (
     <li className="grid gap-8">
-      {prismicH.isFilled.image(image) && (
+      {prismic.isFilled.image(image) && (
         <div className="bg-gray-100">
           <ConditionalWrap
-            condition={prismicH.isFilled.link(item.buttonLink)}
+            condition={prismic.isFilled.link(item.buttonLink)}
             wrap={({ children }) => (
-              <PrismicLink field={item.buttonLink} tabIndex="-1">
+              <PrismicNextLink field={item.buttonLink} tabIndex="-1">
                 {children}
-              </PrismicLink>
+              </PrismicNextLink>
             )}
           >
             <PrismicNextImage field={image} sizes="100vw" className="w-full" />
@@ -28,11 +29,11 @@ const ImageCard = ({ item }) => {
       <div className="leading-relaxed">
         <PrismicRichText field={item.text} />
       </div>
-      {prismicH.isFilled.link(item.buttonLink) && (
+      {prismic.isFilled.link(item.buttonLink) && (
         <div>
-          <PrismicLink field={item.buttonLink} className="font-semibold">
+          <PrismicNextLink field={item.buttonLink} className="font-semibold">
             {item.buttonText || "More Info"}
-          </PrismicLink>
+          </PrismicNextLink>
         </div>
       )}
     </li>
@@ -43,7 +44,7 @@ const ImageCards = ({ slice }) => {
   return (
     <Bounded as="section" className="bg-white">
       <div className="grid gap-12">
-        {prismicH.isFilled.richText(slice.primary.heading) && (
+        {prismic.isFilled.richText(slice.primary.heading) && (
           <Heading className="text-center">
             <PrismicText field={slice.primary.heading} />
           </Heading>

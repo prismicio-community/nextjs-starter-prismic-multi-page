@@ -1,7 +1,7 @@
-import { PrismicRichText } from "@prismicio/react";
 import clsx from "clsx";
 
-import { Bounded } from "../../components/Bounded";
+import { Bounded } from "@/components/Bounded";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 const Text = ({ slice }) => {
   return (

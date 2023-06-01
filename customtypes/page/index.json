@@ -6,13 +6,7 @@
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "UID",
-          "placeholder": ""
-        }
-      },
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
       "title": {
         "type": "StructuredText",
         "config": {
@@ -27,9 +21,7 @@
         "config": {
           "label": "Parent",
           "select": "document",
-          "customtypes": [
-            "page"
-          ]
+          "customtypes": ["page"]
         }
       },
       "slices": {
@@ -37,24 +29,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "hero": {
-              "type": "SharedSlice"
-            },
-            "quote": {
-              "type": "SharedSlice"
-            },
-            "text": {
-              "type": "SharedSlice"
-            },
-            "image": {
-              "type": "SharedSlice"
-            },
-            "image_cards": {
-              "type": "SharedSlice"
-            },
-            "text_with_image": {
-              "type": "SharedSlice"
-            }
+            "hero": { "type": "SharedSlice" },
+            "quote": { "type": "SharedSlice" },
+            "text": { "type": "SharedSlice" },
+            "image": { "type": "SharedSlice" },
+            "image_cards": { "type": "SharedSlice" },
+            "text_with_image": { "type": "SharedSlice" }
           }
         }
       }

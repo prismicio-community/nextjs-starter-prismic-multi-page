@@ -1,9 +1,9 @@
-import * as prismicH from "@prismicio/helpers";
-import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
+import * as prismic from "@prismicio/client";
+import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 
-import { Bounded } from "../../components/Bounded";
-import { Heading } from "../../components/Heading";
+import { Bounded } from "@/components/Bounded";
+import { Heading } from "@/components/Heading";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 /** @type {import("@prismicio/react").PrismicRichTextProps['components']} */
 const components = {
@@ -19,7 +19,7 @@ const Hero = ({ slice }) => {
 
   return (
     <section className="relative bg-slate-900 text-white">
-      {prismicH.isFilled.image(backgroundImage) && (
+      {prismic.isFilled.image(backgroundImage) && (
         <PrismicNextImage
           field={backgroundImage}
           alt=""
@@ -35,13 +35,13 @@ const Hero = ({ slice }) => {
               components={components}
             />
           </div>
-          {prismicH.isFilled.link(slice.primary.buttonLink) && (
-            <PrismicLink
+          {prismic.isFilled.link(slice.primary.buttonLink) && (
+            <PrismicNextLink
               field={slice.primary.buttonLink}
               className="rounded bg-white px-5 py-3 font-medium text-slate-800"
             >
               {slice.primary.buttonText || "Learn More"}
-            </PrismicLink>
+            </PrismicNextLink>
           )}
         </div>
       </Bounded>
