@@ -21,6 +21,14 @@ export async function generateMetadata({ params }) {
   return {
     title: `${asText(page.data.title)} | ${asText(settings.data.siteTitle)}`,
     description: page.data.meta_description,
+    openGraph: {
+      title: page.data.meta_title,
+      images: [
+        {
+          url: page.data.meta_image.url
+        }
+      ]
+    }
   };
 }
 
