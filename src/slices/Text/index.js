@@ -8,7 +8,7 @@ const Text = ({ slice }) => {
     <Bounded as="section" className="bg-white leading-relaxed">
       <div
         className={clsx(
-          slice.variation === "twoColumns" && "md:columns-2 md:gap-6"
+          slice.variation === "twoColumns" && "md:columns-2 md:gap-6",
         )}
       >
         <PrismicRichText field={slice.primary.text} />
