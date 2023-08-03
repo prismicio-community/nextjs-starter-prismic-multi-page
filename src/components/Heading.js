@@ -9,7 +9,7 @@ export function Heading({ as: Comp = "h1", size = "lg", children, className }) {
         size === "lg" && "text-4xl md:text-5xl",
         size === "md" && "text-3xl md:text-4xl",
         size === "sm" && "text-xl md:text-2xl",
-        className
+        className,
       )}
     >
       {children}
