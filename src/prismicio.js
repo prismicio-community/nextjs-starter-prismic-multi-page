@@ -1,12 +1,11 @@
 import * as prismic from "@prismicio/client";
 import * as prismicNext from "@prismicio/next";
-
-import sm from "../slicemachine.config.json";
+import config from "../slicemachine.config.json";
 
 /**
  * The project's Prismic repository name.
  */
-export const { repositoryName } = sm;
+export const repositoryName = config.repositoryName;
 
 /**
  * The project's Prismic Route Resolvers. This list determines a Prismic document's URL.
