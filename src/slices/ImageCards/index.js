@@ -7,17 +7,17 @@ import { Heading } from "@/components/Heading";
 import { ConditionalWrap } from "@/components/ConditionalWrap";
 import { PrismicRichText } from "@/components/PrismicRichText";
 
-const ImageCard = ({ item }) => {
-  const image = item.image;
+const ImageCard = ({ card }) => {
+  const image = card.image;
 
   return (
     <li className="grid gap-8">
       {prismic.isFilled.image(image) && (
         <div className="bg-gray-100">
           <ConditionalWrap
-            condition={prismic.isFilled.link(item.buttonLink)}
+            condition={prismic.isFilled.link(card.buttonLink)}
             wrap={({ children }) => (
-              <PrismicNextLink field={item.buttonLink} tabIndex="-1">
+              <PrismicNextLink field={card.buttonLink} tabIndex="-1">
                 {children}
               </PrismicNextLink>
             )}
@@ -27,12 +27,12 @@ const ImageCard = ({ item }) => {
         </div>
       )}
       <div className="leading-relaxed">
-        <PrismicRichText field={item.text} />
+        <PrismicRichText field={card.text} />
       </div>
-      {prismic.isFilled.link(item.buttonLink) && (
+      {prismic.isFilled.link(card.buttonLink) && (
         <div>
-          <PrismicNextLink field={item.buttonLink} className="font-semibold">
-            {item.buttonText || "More Info"}
+          <PrismicNextLink field={card.buttonLink} className="font-semibold">
+            {card.buttonText || "More Info"}
           </PrismicNextLink>
         </div>
       )}
@@ -50,8 +50,8 @@ const ImageCards = ({ slice }) => {
           </Heading>
         )}
         <ul className="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
-          {slice.items.map((item) => (
-            <ImageCard key={item.image.url} item={item} />
+          {slice.primary.cards.map((card) => (
+            <ImageCard key={card.image.url} card={card} />
           ))}
         </ul>
       </div>

@@ -1,6 +1,7 @@
 {
   "libraries": ["./src/slices"],
   "adapter": "@slicemachine/adapter-next",
-  "repositoryName": "nextjs-starter-prismic-multi-page",
+  "repositoryName": "marketing",
+  "apiEndpoint": "https://marketing.wroom.io/api/v2",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }
