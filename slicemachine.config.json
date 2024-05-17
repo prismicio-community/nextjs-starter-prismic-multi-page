@@ -1,7 +1,6 @@
 {
   "libraries": ["./src/slices"],
   "adapter": "@slicemachine/adapter-next",
-  "repositoryName": "marketing",
-  "apiEndpoint": "https://marketing.wroom.io/api/v2",
+  "repositoryName": "marketing-24",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }
