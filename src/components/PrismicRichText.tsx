@@ -1,10 +1,13 @@
+import {
+  PrismicRichText as BasePrismicRichText,
+  type PrismicRichTextProps,
+  type JSXMapSerializer,
+} from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
-import { PrismicRichText as BasePrismicRichText } from "@prismicio/react";
 
 import { Heading } from "./Heading";
 
-/** @type {import("@prismicio/react").JSXMapSerializer} */
-const defaultComponents = {
+const defaultComponents: JSXMapSerializer = {
   heading1: ({ children }) => (
     <Heading as="h1" className="mb-7 mt-12 first:mt-0 last:mb-0">
       {children}
@@ -51,7 +54,10 @@ const defaultComponents = {
   ),
 };
 
-export function PrismicRichText({ components, ...props }) {
+export function PrismicRichText({
+  components,
+  ...props
+}: PrismicRichTextProps) {
   return (
     <BasePrismicRichText
       components={{ ...defaultComponents, ...components }}

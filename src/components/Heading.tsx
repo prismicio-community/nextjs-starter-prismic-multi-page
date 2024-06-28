@@ -1,6 +1,19 @@
+import type { ReactNode } from "react";
 import clsx from "clsx";
 
-export function Heading({ as: Comp = "h1", size = "lg", children, className }) {
+type HeadingProps = {
+  as?: "h1" | "h2" | "h3";
+  size?: "sm" | "md" | "lg" | "xl";
+  className?: string;
+  children?: ReactNode;
+};
+
+export function Heading({
+  as: Comp = "h1",
+  size = "lg",
+  children,
+  className,
+}: HeadingProps) {
   return (
     <Comp
       className={clsx(

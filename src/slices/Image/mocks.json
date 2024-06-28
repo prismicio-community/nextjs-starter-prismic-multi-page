@@ -1,68 +1,70 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "image": {
-        "__TYPE__": "ImageContent",
-        "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
-          "width": 4000,
-          "height": 4000
-        },
-        "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
-        "width": 4000,
-        "height": 4000,
-        "edit": {
-          "zoom": 1,
-          "crop": {
-            "x": 0,
-            "y": 0
-          },
-          "background": "transparent"
-        },
-        "thumbnails": {}
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  },
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "banner",
-    "primary": {
-      "image": {
-        "__TYPE__": "ImageContent",
-        "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
-          "width": 3277,
-          "height": 4092
-        },
-        "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?rect=0%2C1500%2C3277%2C1092&w=3000&h=1000",
-        "width": 3000,
-        "height": 1000,
-        "edit": {
-          "zoom": 1,
-          "crop": {
-            "x": 0,
-            "y": 1500
-          },
-          "background": "transparent"
-        },
-        "thumbnails": {}
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": []
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"__TYPE__": "ImageContent",
+				"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxMHx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzE5NTMwMDQ2fDA&ixlib=rb-4.0.3&q=85",
+				"alt": "orange fruits under blue sky during daytime",
+				"origin": {
+					"id": "eaOjEz8746k",
+					"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxMHx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzE5NTMwMDQ2fDA&ixlib=rb-4.0.3&q=85",
+					"width": 5688,
+					"height": 3792
+				},
+				"width": 5688,
+				"height": 3792,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "banner",
+		"primary": {
+			"image": {
+				"__TYPE__": "ImageContent",
+				"url": "https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MTk1MzAwNDZ8MA&ixlib=rb-4.0.3&q=85&rect=0%2C1512%2C3024%2C1008&w=3000&h=1000",
+				"alt": "sliced grapefruits",
+				"origin": {
+					"id": "ezSFnAFi9hY",
+					"url": "https://images.unsplash.com/photo-1577234286642-fc512a5f8f11?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3MTk1MzAwNDZ8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3024,
+					"height": 4032
+				},
+				"width": 3000,
+				"height": 1000,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 1512
+					}
+				},
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]

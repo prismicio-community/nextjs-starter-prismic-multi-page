@@ -1,10 +1,13 @@
-import * as prismic from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
+import { type Content, isFilled } from "@prismicio/client";
+import type { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 import { Bounded } from "@/components/Bounded";
 import { PrismicRichText } from "@/components/PrismicRichText";
 
-const TextWithImage = ({ slice }) => {
+type TextWithImageProps = SliceComponentProps<Content.TextWithImageSlice>;
+
+const TextWithImage = ({ slice }: TextWithImageProps) => {
   const image = slice.primary.image;
 
   return (
@@ -12,9 +15,17 @@ const TextWithImage = ({ slice }) => {
       <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
         <div>
           <PrismicRichText field={slice.primary.text} />
+          {slice.variation === "withButton" && slice.primary.buttonLink ? (
+            <PrismicNextLink
+              field={slice.primary.buttonLink}
+              className="font-semibold"
+            >
+              {slice.primary.buttonText || "Learn more"}
+            </PrismicNextLink>
+          ) : null}
         </div>
         <div>
-          {prismic.isFilled.image(image) && (
+          {isFilled.image(image) && (
             <div className="bg-gray-100">
               <PrismicNextImage
                 field={image}

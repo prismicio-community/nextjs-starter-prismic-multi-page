@@ -1,4 +1,13 @@
+import type { ReactNode } from "react";
 import clsx from "clsx";
+
+type BoundedProps = {
+  as?: "div" | "section" | "header";
+  yPadding?: "sm" | "base" | "lg";
+  collapsible?: boolean;
+  className?: string;
+  children?: ReactNode;
+};
 
 export function Bounded({
   as: Comp = "div",
@@ -6,7 +15,7 @@ export function Bounded({
   collapsible = true,
   className,
   children,
-}) {
+}: BoundedProps) {
   return (
     <Comp
       data-collapsible={collapsible}
