@@ -1,12 +1,12 @@
-import * as prismic from "@prismicio/client";
+import { type Content, isFilled } from "@prismicio/client";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
+import type { SliceComponentProps, JSXMapSerializer } from "@prismicio/react";
 
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
 import { PrismicRichText } from "@/components/PrismicRichText";
 
-/** @type {import("@prismicio/react").PrismicRichTextProps['components']} */
-const components = {
+const components: JSXMapSerializer = {
   heading1: ({ children }) => (
     <Heading as="h2" size="xl" className="mb-4 mt-12 first:mt-0 last:mb-0">
       {children}
@@ -14,12 +14,14 @@ const components = {
   ),
 };
 
-const Hero = ({ slice }) => {
+type HeroProps = SliceComponentProps<Content.HeroSlice>;
+
+const Hero = ({ slice }: HeroProps) => {
   const backgroundImage = slice.primary.backgroundImage;
 
   return (
     <section className="relative bg-slate-900 text-white">
-      {prismic.isFilled.image(backgroundImage) && (
+      {isFilled.image(backgroundImage) && (
         <PrismicNextImage
           field={backgroundImage}
           alt=""
@@ -35,7 +37,7 @@ const Hero = ({ slice }) => {
               components={components}
             />
           </div>
-          {prismic.isFilled.link(slice.primary.buttonLink) && (
+          {isFilled.link(slice.primary.buttonLink) && (
             <PrismicNextLink
               field={slice.primary.buttonLink}
               className="rounded bg-white px-5 py-3 font-medium text-slate-800"

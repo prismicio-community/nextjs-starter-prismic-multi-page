@@ -1,9 +1,9 @@
 import "./globals.css";
 
 import { Inter } from "next/font/google";
+import { asText } from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink, PrismicPreview } from "@prismicio/next";
-import * as prismic from "@prismicio/client";
 
 import { createClient, repositoryName } from "@/prismicio";
 import { Bounded } from "@/components/Bounded";
@@ -14,14 +14,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-/**
- * @param {{ children: React.ReactNode }}
- */
-export default async function RootLayout({ children }) {
+export default async function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={inter.variable}>
       <body className="overflow-x-hidden antialiased">
-        {/* @ts-expect-error Async Server Component */}
         <Header />
         {children}
         <PrismicPreview repositoryName={repositoryName} />
@@ -48,7 +46,7 @@ async function Header() {
           <ul className="flex flex-wrap gap-6 md:gap-10">
             {navigation.data?.links.map((item) => (
               <li
-                key={prismic.asText(item.label)}
+                key={asText(item.label)}
                 className="font-semibold tracking-tight text-slate-800"
               >
                 <PrismicNextLink field={item.link}>
