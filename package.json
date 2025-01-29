@@ -16,7 +16,7 @@
   "dependencies": {
     "@prismicio/client": "^7.15.1",
     "@prismicio/next": "^2.0.0",
-    "@prismicio/react": "^2.9.2",
+    "@prismicio/react": "^3.0.0",
     "clsx": "^2.1.1",
     "next": "^15.1.6",
     "react": "^19.0.0",
