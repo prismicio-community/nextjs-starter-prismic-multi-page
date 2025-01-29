@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { type Content, isFilled } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
@@ -7,7 +8,7 @@ import { PrismicRichText } from "@/components/PrismicRichText";
 
 type TextWithImageProps = SliceComponentProps<Content.TextWithImageSlice>;
 
-const TextWithImage = ({ slice }: TextWithImageProps) => {
+const TextWithImage: FC<TextWithImageProps> = ({ slice }) => {
   const image = slice.primary.image;
 
   return (

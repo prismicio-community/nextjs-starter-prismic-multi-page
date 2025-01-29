@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { type Content, isFilled } from "@prismicio/client";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 import type { SliceComponentProps, JSXMapSerializer } from "@prismicio/react";
@@ -16,7 +17,7 @@ const components: JSXMapSerializer = {
 
 type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
-const Hero = ({ slice }: HeroProps) => {
+const Hero: FC<HeroProps> = ({ slice }) => {
   const backgroundImage = slice.primary.backgroundImage;
 
   return (

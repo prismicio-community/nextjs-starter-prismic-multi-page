@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { type Content, isFilled } from "@prismicio/client";
 import { PrismicText, type SliceComponentProps } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
@@ -11,7 +12,7 @@ type ImageCardProps = {
   card: Content.ImageCardsSliceDefaultPrimaryCardsItem;
 };
 
-const ImageCard = ({ card }: ImageCardProps) => {
+const ImageCard: FC<ImageCardProps> = ({ card }) => {
   const image = card.image;
 
   return (

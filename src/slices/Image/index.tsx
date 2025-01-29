@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { type Content, isFilled } from "@prismicio/client";
 import type { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
@@ -7,7 +8,7 @@ import { Bounded } from "@/components/Bounded";
 
 type ImageProps = SliceComponentProps<Content.ImageSlice>;
 
-const Image = ({ slice, index }: ImageProps) => {
+const Image: FC<ImageProps> = ({ slice, index }) => {
   const image = slice.primary.image;
 
   return (
