@@ -2,22 +2,22 @@
   "id": "quote",
   "type": "SharedSlice",
   "name": "Quote",
-  "description": "Quote",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Quote",
+      "imageUrl": "https://images.prismic.io/marketing-24/shared-slices/quote/default/7134de08ce40d0e4ab7252979f078db54da58130.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Quote",
       "primary": {
         "quote": {
           "type": "StructuredText",
           "config": {
             "label": "Quote",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "strong,em,heading3"
+            "single": "strong,em,heading3",
+            "allowTargetBlank": true
           }
         },
         "source": {
@@ -28,8 +28,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     }
-  ]
+  ],
+  "description": "Quote"
 }

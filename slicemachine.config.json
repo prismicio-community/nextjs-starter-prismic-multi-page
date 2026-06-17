@@ -1,6 +1,0 @@
-{
-  "libraries": ["./src/slices"],
-  "adapter": "@slicemachine/adapter-next",
-  "repositoryName": "marketing-24",
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
-}

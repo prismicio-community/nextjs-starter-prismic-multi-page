@@ -13,19 +13,12 @@ This page covers how to use **Prismic + Next.js Multi-Page Starter** with Prismi
 
 ## 🚀 Quick Start
 
-To start a new project using this starter, run the following commands in your terminal:
+To start a new project using this starter:
 
-```sh
-npx degit prismicio-community/nextjs-starter-prismic-multi-page your-project-name
-cd your-project-name
-npx @slicemachine/init
-```
-
-The commands will do the following:
-
-1. Start a new Next.js project using this starter.
-2. Ask you to log in to Prismic or [create an account][prismic-sign-up].
-3. Create a new Prismic content repository with sample content.
+1. Visit <https://prismic.io/dashboard>.
+2. Create a new Prismic repository by selecting **Next.js**.
+3. Select the **Multi-Page starter**.
+4. Fill out your repository details and continue with the steps given in Prismic.
 
 When you're ready to start your project, run the following command:
 
@@ -91,7 +84,7 @@ These are important files that you should leave as-is:
 - `pages/api/exit-preview.js` - Do not edit or delete this file. This is the API endpoint to close a Prismic preview session.
 - `pages/api/preview.js` - Do not edit or delete this file. This is the API endpoint to launch a Prismic preview session.
 - `pages/slice-simulator.js` - Do not edit or delete this file. This file simulates your Slice components in development.
-- `slices/` - This directory contains Slice components, which are generated programmatically by Slice Machine. To customize a Slice template, you can edit the Slice's index.js file. To add Slices, delete Slices, or edit Slice models, use Slice Machine (more info below).
+- `slices/` - This directory contains Slice components. To customize a Slice template, you can edit the Slice's index.js file. To add Slices, delete Slices, or edit Slice models, use the Type Builder (more info below).
 
 Learn more about how to edit your components with [Fetch Data in Next.js](https://prismic.io/docs/technologies/fetch-data-nextjs) and [Template Content in Next.js](https://prismic.io/docs/technologies/template-content-nextjs).
 
@@ -101,11 +94,15 @@ Styling in this project is implemented with Tailwind CSS. See the [Tailwind docs
 
 To put your project online, see [Deploy your Next.js App](https://prismic.io/docs/technologies/deploy-nextjs).
 
-### Edit content models with Slice Machine
+### Edit content models with the Type Builder
 
-This project includes an application called Slice Machine, which generates models for your Custom Types and Slices. Slice Machine stores the models locally in your codebase, so you can save and version them. It also syncs your models to Prismic. To learn how to use Slice Machine, read [Model Content in Next.js](https://prismic.io/docs/technologies/model-content-nextjs).
+This project uses the [Type Builder](https://prismic.io/docs/type-builder), Prismic's cloud-based interface for modeling your Custom Types and Slices. Model your content in the Type Builder, then use the [Prismic CLI](https://prismic.io/docs/cli) to sync your models into your codebase, where you can save and version them:
 
-If you change or add to your Custom Types, you'll need to update your route handling to match. To learn how to do that, read [Define Paths in Next.js](https://prismic.io/docs/technologies/define-paths-nextjs).
+```sh
+npx prismic sync
+```
+
+If you change or add to your Custom Types, you'll need to update your route handling to match. Routes are configured in the `routes` array in `prismic.config.json`.
 
 ## Learn more
 

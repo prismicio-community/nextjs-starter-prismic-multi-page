@@ -2,47 +2,47 @@
   "id": "text",
   "type": "SharedSlice",
   "name": "Text",
-  "description": "Text",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Text",
+      "imageUrl": "https://images.prismic.io/marketing-24/shared-slices/text/default/dc41abc0bb81ad5e01e01ac5577a9171dbc9e95c.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Text",
       "primary": {
         "text": {
           "type": "StructuredText",
           "config": {
             "label": "Text",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
+            "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item",
+            "allowTargetBlank": true
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     },
     {
       "id": "twoColumns",
       "name": "Two Columns",
+      "description": "Text",
+      "imageUrl": "https://images.prismic.io/marketing-24/shared-slices/text/twoColumns/6d83e7d036588cfac1cbe1f4a1782442d0ef20d8.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Text",
       "primary": {
         "text": {
           "type": "StructuredText",
           "config": {
             "label": "Text",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "heading1,heading2,heading3,paragraph,em,strong,hyperlink,list-item,o-list-item"
+            "multi": "heading1,heading2,heading3,paragraph,em,strong,hyperlink,list-item,o-list-item",
+            "allowTargetBlank": true
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     }
-  ]
+  ],
+  "description": "Text"
 }

@@ -2,22 +2,22 @@
   "id": "image_cards",
   "type": "SharedSlice",
   "name": "ImageCards",
-  "description": "ImageCards",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "ImageCards",
+      "imageUrl": "https://images.prismic.io/marketing-24/shared-slices/image_cards/default/fcc4659bbb1cb6c435b2e005791b10378211ee44.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "ImageCards",
       "primary": {
         "heading": {
           "type": "StructuredText",
           "config": {
             "label": "Heading",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "heading1"
+            "multi": "heading1",
+            "allowTargetBlank": true
           }
         },
         "cards": {
@@ -42,8 +42,8 @@
                 "config": {
                   "label": "Text",
                   "placeholder": "",
-                  "allowTargetBlank": true,
-                  "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                  "allowTargetBlank": true
                 }
               },
               "buttonLink": {
@@ -65,8 +65,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     }
-  ]
+  ],
+  "description": "ImageCards"
 }
