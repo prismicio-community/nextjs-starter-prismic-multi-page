@@ -31,7 +31,7 @@ npm run dev
 This project uses the [Type Builder](https://prismic.io/docs/type-builder), Prismic's cloud-based interface for modeling your Custom Types and Slices. Model your content in the Type Builder, then use the [Prismic CLI](https://prismic.io/docs/cli) to sync your models into your codebase, where you can save and version them:
 
 ```sh
-npx prismic sync
+npx prismic pull
 ```
 
 If you change or add to your Custom Types, you'll need to update your route handling to match. Routes are configured in the `routes` array in `prismic.config.json`.
