@@ -1,0 +1,23 @@
+{
+  "repositoryName": "marketing-24",
+  "libraries": ["./src/slices"],
+  "routes": [
+    {
+      "type": "page",
+      "uid": "home",
+      "path": "/"
+    },
+    {
+      "type": "page",
+      "path": "/:uid"
+    },
+    {
+      "type": "settings",
+      "path": "/"
+    },
+    {
+      "type": "navigation",
+      "path": "/"
+    }
+  ]
+}

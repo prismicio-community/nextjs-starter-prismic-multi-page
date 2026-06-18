@@ -2,14 +2,14 @@
   "id": "image",
   "type": "SharedSlice",
   "name": "Image",
-  "description": "Image",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Image",
+      "imageUrl": "https://images.prismic.io/marketing-24/shared-slices/image/default/20c30cb7b65046aac7da23978c2a96973b2c50f9.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Image",
       "primary": {
         "image": {
           "type": "Image",
@@ -20,15 +20,15 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     },
     {
       "id": "banner",
       "name": "Banner",
+      "description": "Image",
+      "imageUrl": "https://images.prismic.io/marketing-24/shared-slices/image/banner/335bb09bce0a203cfc9e498b0803e269989e4413.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Image",
       "primary": {
         "image": {
           "type": "Image",
@@ -42,8 +42,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     }
-  ]
+  ],
+  "description": "Image"
 }

@@ -2,22 +2,22 @@
   "id": "hero",
   "type": "SharedSlice",
   "name": "Hero",
-  "description": "Hero",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Hero",
+      "imageUrl": "https://images.prismic.io/marketing-24/shared-slices/hero/default/0d5ad5ff8d247e5173487e1d0ac9405a7cb231d1.png?auto=compress%2Cformat",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Hero",
       "primary": {
         "text": {
           "type": "StructuredText",
           "config": {
             "label": "Text",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,heading1,strong,em"
+            "multi": "paragraph,heading1,strong,em",
+            "allowTargetBlank": true
           }
         },
         "buttonLink": {
@@ -44,8 +44,8 @@
           }
         }
       },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "items": {}
     }
-  ]
+  ],
+  "description": "Hero"
 }
